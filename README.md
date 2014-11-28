@@ -1,3 +1,3 @@
-FOSSGIS-App-2014
+FOSSGIS-App-2015
 ================
-App für die FOSSGIS 2014 in Münster
+App für die FOSSGIS 2015 in Münster
