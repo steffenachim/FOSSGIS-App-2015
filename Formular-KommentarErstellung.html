@@ -1,0 +1,43 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FOSSGIS 2015</title>
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+<form>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Überschrift
+        <input type="text" placeholder="Thema" />
+      </label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Notiz
+        <textarea placeholder="Inhalt"></textarea>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+  </br>
+  <input type="submit" name="submit1" style="BACKGROUND-COLOR: #FA751A; COLOR: white" value="Abschicken" class="default button">
+  </div>
+</form>
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script src="js/foundation/foundation.interchange.js"></script>
+  <script src="js/foundation/foundation.offcanvas.js"></script>
+  <script>
+    $(document).foundation();
+    $("#swap").on("replace", function() {
+      $(document).foundation();
+    });
+  </script>
+</body>
+</html>

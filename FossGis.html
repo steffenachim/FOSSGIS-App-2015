@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>FOSSGIS 2015</title>
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/vendor/modernizr.js"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+</head>
+<body >
+   <div class="row">
+		<img src="header.png" height="100%" alt="SchlossMuenster">
+		
+	</div>
+
+   <div class="row">  
+   <!-- </div>
+Verschiebt alles nach links
+  </div> -->
+
+  <div class="large-12 columns">
+  <br>
+    
+    <dl class="tabs"  align="center" data-tab data-options="deep_linking:true" data-options="scroll_to_content: false">
+        <dd class="active"><a href="#News">Aktuelles</a></dd>
+        <dd>         <a href="#Veranstaltungen">Veranstaltungen</a></dd>
+        <dd>         <a href="#Navigation">Navigation</a></dd>
+		<dd>		 <a href="#schwarzesBrett">Schwarzes Brett</a></dd>
+    </dl>
+      <div class="tabs-content">
+        <div class="content active" id="News">
+          <figure>
+				<img width="880" height="130" alt="BannerFOSSGISMUENSTERAktAllg" src="BannerFOSSGISMUENSTERAktAllg.jpg"/>
+	
+			</figure>
+		  <div> 
+			<a class="twitter-timeline"  href="https://twitter.com/FOSSGIS2015" data-widget-id="542438223738187776">Tweets von @FOSSGIS2015 </a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    	  </div>
+        </div>
+        <div class="content" id="Veranstaltungen">
+		<figure>
+				<img width="880" height="130" alt="BannerFOSSGISMUENSTERVeranstaltungs" src="BannerFOSSGISMUENSTERVeranstaltungs.jpg"/>
+	
+			</figure>
+		<div class="row">
+			<div class="large-9">
+				<input type="text" placeholder="Finde Veranstaltungen">
+			</div>
+			<div class="large-3">
+				<a href="#" target="_blank" onclick="return update(this.href);" class="alert button expand">Search</a>
+			</div>	
+		</div>
+          
+		  <dl class="accordion" data-accordion>
+		  <dd class="accordion-navigation">
+			<a href="#panel1">Freitag</a>
+			<div id="panel1" class="content active">
+			  <dl class="tabs" data-tab>
+				<dd class="active"><a href="#panel1-1">Schloss1</a></dd>
+				<dd><a href="#panel1-2">Schloss2</a></dd>
+				<dd><a href="#panel1-3">IfGi</a></dd>
+			</dl>
+			  <div class="tabs-content">
+				<div class="content active" id="panel1-1">
+				  <p>First panel content goes here...</p>
+				</div>
+				<div class="content" id="panel1-2">
+				  <p>Second panel content goes here...</p>
+				</div>
+				<div class="content" id="panel1-3">
+				  <p>Third panel content goes here...</p>
+				</div>
+			  </div>
+			</div>
+		  </dd>
+		   <dd class="accordion-navigation">
+			<a href="#panel2">Samstag</a>
+			<div id="panel2 class="content">
+			
+				<table border="1">
+				  <tr>
+					<th>Schloss1</th>
+					<th>Schloss2</th>
+					<th>IfGi</th>
+				  </tr>
+				  <tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				  </tr>
+				  <tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				  </tr>
+				</table>
+			  <!--<dl class="tabs" data-tab>
+				<dd class="active"><a href="#panel2-1">Schloss1</a></dd>
+				<dd><a href="#panel2-2">Schloss2</a></dd>
+				<dd><a href="#panel2-3">IfGi</a></dd>
+			</dl>
+			  <div class="tabs-content">
+				<div class="content active" id="panel2-1">
+				  <p>First panel content goes here...</p>
+				</div>
+				<div class="content" id="panel2-2">
+				  <p>Second panel content goes here...</p>
+				</div>
+				<div class="content" id="panel2-3">
+				  <p>Third panel content goes here...</p>
+				</div>
+			  </div>-->
+			</div>
+		  </dd>
+		  <dd class="accordion-navigation">
+			<a href="#panel3">Sonntag</a>
+			<div id="panel3" class="content">
+			  
+			  <dl class="tabs" data-tab>
+				<dd class="active"><a href="#panel3-1">Schloss1</a></dd>
+				<dd><a href="#panel3-2">Schloss2</a></dd>
+				<dd><a href="#panel3-3">IfGi</a></dd>
+			</dl>
+			  <div class="tabs-content">
+				<div class="content active" id="panel3-1">
+				  <p>First panel content goes here...</p>
+				</div>
+				<div class="content" id="panel3-2">
+				  <p>Second panel content goes here...</p>
+				</div>
+				<div class="content" id="panel3-3">
+				  <p>Third panel content goes here...</p>
+				</div>
+			  </div>
+			</div>
+			 </dd>
+			</div>
+		 
+		  
+
+
+  
+ 
+  
+  
+  <div class="content" id="Navigation">
+  <figure>
+				<img width="880" height="130" alt="BannerFOSSGISMUENSTERNavigation" src="BannerFOSSGISMUENSTERNavigation.jpg"/>
+	
+			</figure>
+   <div id="map">
+   <style>#map { height: 400px; }  </style>
+   <script type="text/javascript" >
+   	var map = L.map('map').setView([51.969103, 7.595748],16);
+	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 20,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+		}).addTo(map);
+
+	L.marker([51.969103, 7.595748]).addTo(map).bindPopup("IfGi").openPopup();
+	L.marker([51.963772, 7.613425]).addTo(map).bindPopup("Schloss").openPopup();
+   </script>
+   </div>
+   </br>
+   <p> <a href="http://www.stadtwerke-muenster.de/fis/5991" class="button">Bushaltestelle Mendelstraße</a>
+		<a href="http://www.stadtwerke-muenster.de/fis/1362" class="button">Bushaltestelle Landgericht</a></p> 
+   <p> Raumpläne? </p>
+  </div>
+
+        
+	<!--	
+        
+        <div class="content" id="Abstimmung">
+          <form name="button" action="submit.php" method="post">
+						<h1>Wählen Sie einen Vortrag aus:</h1>
+						<h3>Freitag 15-17 Uhr</h3>
+						<input type="checkbox" name="vorFr" value="Vorschlag 1">  Vorschlag 1<br>
+						<input type="checkbox" name="vorFr" value="Vorschlag 2">  Vorschlag 2<br>
+						<h3> Samstag 10-12 Uhr</h3>
+						<input type="checkbox" name="vorSaMo" value="Vorschlag 1">  Vorschlag 1<br>
+						<input type="checkbox" name="vorSaMo" value="Vorschlag 2">  Vorschlag 2<br>
+						<h3> Samstag 14-16 Uhr</h3>
+						<input type="checkbox" name="vorSaNa" value="Vorschlag 1">  Vorschlag 1<br>
+						<input type="checkbox" name="vorSaNa" value="Vorschlag 2">  Vorschlag 2<br>
+						<h3> Sonntag 10-12 Uhr</h3>
+						<input type="checkbox" name="vorSoMo" value="Vorschlag 1">  Vorschlag 1<br>
+						<input type="checkbox" name="vorSoMo" value="Vorschlag 2">  Vorschlag 2<br>
+						
+						<input type="submit" name="submit1" style="BACKGROUND-COLOR: #FA751A; COLOR: white" value="Abstimmen">
+		   </form>  
+		</div>
+
+	-->
+
+            
+      <div class="content" id="schwarzesBrett">
+	  <figure>
+				<img width="880" height="130" alt="BannerFOSSGISMUENSTERSchwarz" src="BannerFOSSGISMUENSTERSchwarz.jpg"/>
+	
+			</figure>
+			<p><img src="schwarzesBrett.png" alt="schwarzes Brett"></p>
+			<ul class="small-block-grid-1 medium-block-grid-3">
+			<li>
+ 			<ul class="accordion">
+			  <li class="accordion-navigation">
+				<a href="schwarzesBrett#panel1">Kommentar erstellen</a>
+				<div id="panel1" class="content">
+				 <form>
+					  <div class="row">
+						<div class="large-12 columns">
+						  <label>Überschrift
+							<input type="text" placeholder="Thema" />
+						  </label>
+						</div>
+					  </div>
+
+					  <div class="row">
+						<div class="large-12 columns">
+						  <label>Notiz
+							<textarea placeholder="Inhalt"></textarea>
+						  </label>
+						</div>
+					  </div>
+					  <div class="row">
+					  </br>
+					  <input type="submit" name="submit1" style="BACKGROUND-COLOR: #FA751A; COLOR: white" value="Abschicken" class="default button">
+					  </div>
+				 </form>
+			    </div>
+			  </li>
+			</ul> 
+			</li>			
+			</ul>
+			
+	
+	  </div>
+        </div>
+
+    </div>
+  </div>
+  </div>
+  
+  
+  <div class="row">
+  <script type="text/javascript" charset="utf-8" src="http://static.polldaddy.com/p/8458717.js"></script>
+<noscript><a href="http://polldaddy.com/poll/8458717/">Best Kitesurfing Brand of 2014</a></noscript>
+</div>
+   <!-- Footer -->
+   
+  <ul class="breadcrumbs">
+  <li class="current"><a href="#">Home</a></li>
+  <li><a href="Kontakt.html">Kontakt</a></li>
+  <li><a href="Impressum.html">Impressum</a></li>
+  <li><a href="FAQ.html">FAQ</a></li>
+</ul>
+
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script src="js/foundation/foundation.interchange.js"></script>
+  <script src="js/foundation/foundation.offcanvas.js"></script>
+  <script>
+    $(document).foundation();
+    $("#swap").on("replace", function() {
+      $(document).foundation();
+    });
+  </script>
+</body>
+</html>
