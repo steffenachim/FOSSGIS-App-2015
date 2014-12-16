@@ -1,0 +1,7 @@
+app:
+  volumes:
+    - ./:/var/www/html/fossgis
+  ports:
+    - "8088:80"
+    - "22:22"
+  image: dockie/lamp
