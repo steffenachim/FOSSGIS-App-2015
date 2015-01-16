@@ -14,7 +14,7 @@
 </head>
 <body >
    <div class="row">
-		<img src="header.png" height="100%" alt="SchlossMuenster">
+		<img src="img/header.png" height="100%" alt="SchlossMuenster">
 		
 	</div>
 
@@ -35,7 +35,7 @@ Verschiebt alles nach links
       <div class="tabs-content">
         <div class="content active" id="News">
           <figure>
-				<img width="880" height="130" alt="BannerFOSSGISMUENSTERAktAllg" src="BannerFOSSGISMUENSTERAktAllg.jpg"/>
+				<img width="880" height="130" alt="BannerFOSSGISMUENSTERAktAllg" src="img/BannerFOSSGISMUENSTERAktAllg.jpg"/>
 		  </figure>
 		<div> 
 			<a class="twitter-timeline" align="center" href="https://twitter.com/FOSSGIS2015" data-widget-id="542438223738187776">Tweets von @FOSSGIS2015 </a>
@@ -44,21 +44,31 @@ Verschiebt alles nach links
         </div>
         <div class="content" id="Veranstaltungen">
 		<figure>
-				<img width="880" height="130" alt="BannerFOSSGISMUENSTERVeranstaltungs" src="BannerFOSSGISMUENSTERVeranstaltungs.jpg"/>
+				<img width="880" height="130" alt="BannerFOSSGISMUENSTERVeranstaltungs" src="img/BannerFOSSGISMUENSTERVeranstaltungs.jpg"/>
 	
 			</figure>
-		<div class="row">
-			<div class="large-9">
-				<input type="text" placeholder="Finde Veranstaltungen">
-			</div>
-			<div class="large-3">
-				<a href="#" target="_blank" onclick="return update(this.href);" class="alert button expand">Search</a>
-			</div>	
-		</div>
-          
+
+
+			  <div class="row collapse">
+				<div class="large-10 small-9 columns">
+				  <input type="text" placeholder="Finde Veranstaltungen">
+				</div>
+				<div class="large-2 small-3 columns">
+				  <a href="#" class="alert button expand" id="search">Search</a>
+				  <style>
+					#search{
+					  padding-top: 0.3rem;
+					  padding-right: 2rem;
+					  padding-bottom: 0.3rem;
+					  padding-left: 2rem;
+					  font-size: 1.5rem;}
+				  </style>
+				</div>
+			  </div>
+		         
 		  <dl class="accordion" data-accordion>
 		  <dd class="accordion-navigation">
-			<a href="#panel1">Freitag</a>
+			<a href="#panel1">Mittwoch</a>
 			<div id="panel1" class="content active">
 			 <dl class="tabs" data-tab>
 				<dd class="active"><a href="#panel3-1">Aula</a></dd>
@@ -71,7 +81,16 @@ Verschiebt alles nach links
 			</dl>
 			  <div class="tabs-content">
 				<div class="content active" id="panel1-1">
-				  13-13:30: Eröffnung<a href="#" class="button">weitere Informationen</a><a href="#" class="button">Teilnehmen</a>
+				  13-13:30: Eröffnung  <a href="#" class="button" data-reveal-id="infos">weitere Informationen</a>
+
+					<div id="infos" class="reveal-modal" data-reveal>
+					  <h2>Informationen</h2>
+					  <p class="lead">dtjhhjlkhjgfdsegtdgfhhkluizt</p>
+					  <p>tzdhgfdawerthgvnbliuztreawfsdyxbfncghkgiouhlkjhgsf</p>
+					  <a class="close-reveal-modal">&#215;</a>
+					</div>				  
+				  <a href="#" class="button">Merken</a>				  
+				  <a href="#" class="button">Teilnehmen </a>
 				</div>
 				<div class="content" id="panel1-2">
 				  <p>Second panel content goes here...</p>
@@ -80,22 +99,22 @@ Verschiebt alles nach links
 				  <p>Third panel content goes here...</p>
 				</div>
 				<div class="content" id="panel1-4">
-				  <p>Third panel content goes here...</p>
+				  <p>fourth panel content goes here...</p>
 				</div>
 				<div class="content" id="panel1-5">
-				  <p>Third panel content goes here...</p>
+				  <p>fifth panel content goes here...</p>
 				</div>
 				<div class="content" id="panel1-6">
-				  <p>Third panel content goes here...</p>
+				  <p>sixth panel content goes here...</p>
 				</div>
 				<div class="content" id="panel1-7">
-				  <p>Third panel content goes here...</p>
+				  <p>seventh panel content goes here...</p>
 				</div>
 			  </div>
 			</div>
 		  </dd>
 		   <dd class="accordion-navigation">
-			<a href="#panel2">Samstag</a>
+			<a href="#panel2">Donnerstag</a>
 			<div id="panel2 class="content">
 			
 		   <dl class="tabs" data-tab>
@@ -133,7 +152,7 @@ Verschiebt alles nach links
 			</div>
 		  </dd>
 		  <dd class="accordion-navigation">
-			<a href="#panel3">Sonntag</a>
+			<a href="#panel3">Freitag</a>
 			<div id="panel3" class="content">
 			  
 			  <dl class="tabs" data-tab>
@@ -181,7 +200,7 @@ Verschiebt alles nach links
   
   <div class="content" id="Navigation">
   <figure>
-				<img width="880" height="130" alt="BannerFOSSGISMUENSTERNavigation" src="BannerFOSSGISMUENSTERNavigation.jpg"/>
+				<img width="880" height="130" alt="BannerFOSSGISMUENSTERNavigation" src="img/BannerFOSSGISMUENSTERNavigation.jpg"/>
 	
 			</figure>
    <div id="map">
@@ -203,38 +222,14 @@ Verschiebt alles nach links
    <p> Raumpläne? </p>
   </div>
 
-        
-	<!--	
-        
-        <div class="content" id="Abstimmung">
-          <form name="button" action="submit.php" method="post">
-						<h1>Wählen Sie einen Vortrag aus:</h1>
-						<h3>Freitag 15-17 Uhr</h3>
-						<input type="checkbox" name="vorFr" value="Vorschlag 1">  Vorschlag 1<br>
-						<input type="checkbox" name="vorFr" value="Vorschlag 2">  Vorschlag 2<br>
-						<h3> Samstag 10-12 Uhr</h3>
-						<input type="checkbox" name="vorSaMo" value="Vorschlag 1">  Vorschlag 1<br>
-						<input type="checkbox" name="vorSaMo" value="Vorschlag 2">  Vorschlag 2<br>
-						<h3> Samstag 14-16 Uhr</h3>
-						<input type="checkbox" name="vorSaNa" value="Vorschlag 1">  Vorschlag 1<br>
-						<input type="checkbox" name="vorSaNa" value="Vorschlag 2">  Vorschlag 2<br>
-						<h3> Sonntag 10-12 Uhr</h3>
-						<input type="checkbox" name="vorSoMo" value="Vorschlag 1">  Vorschlag 1<br>
-						<input type="checkbox" name="vorSoMo" value="Vorschlag 2">  Vorschlag 2<br>
-						
-						<input type="submit" name="submit1" style="BACKGROUND-COLOR: #FA751A; COLOR: white" value="Abstimmen">
-		   </form>  
-		</div>
-
-	-->
 
             
       <div class="content" id="schwarzesBrett">
 	  <figure>
-				<img width="880" height="130" alt="BannerFOSSGISMUENSTERSchwarz" src="BannerFOSSGISMUENSTERSchwarz.jpg"/>
+				<img width="880" height="130" alt="BannerFOSSGISMUENSTERSchwarz" src="img/BannerFOSSGISMUENSTERSchwarz.jpg"/>
 	
 			</figure>
-			<p><img src="schwarzesBrett.png" alt="schwarzes Brett"></p>
+			<p><img src="img/schwarzesBrett.png" alt="schwarzes Brett"></p>
 			<ul class="small-block-grid-1 medium-block-grid-3">
 			<li>
  			<ul class="accordion">
