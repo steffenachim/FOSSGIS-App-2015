@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>FOSSGIS 2015</title>
+  <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/vendor/modernizr.js"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src="phonegap.js" type="text/javascript"></script>
+
+</head>
+<body >
+   <div class="row">
+		<img src="img/header.png" height="100%" alt="SchlossMuenster">
+		
+	</div>
+
+   <div class="row">  
+   <!-- </div>
+Verschiebt alles nach links
+  </div> -->
+
+  <div class="large-12 columns">
+  <br>
+    
+    <dl class="tabs"  align="center" data-tab data-options="deep_linking:true" data-options="scroll_to_content: false">
+        <dd class="active"><a href="index.html">Aktuelles</a></dd>
+        <dd>         <a href="Veranstaltungen.html">Veranstaltungen</a></dd>
+        <dd>         <a href="Navigation.html">Navigation</a></dd>
+		<dd>		 <a href="schwarzesBrett.html">Schwarzes Brett</a></dd>
+    </dl>
+	
+	 <div class="content" id="Navigation">
+	<strong class="hide-for-small-only">
+		<figure>
+				<img width="880" height="130" alt="BannerFOSSGISMUENSTERNavigation" src="img/BannerFOSSGISMUENSTERNavigation.jpg"/>
+	
+		</figure>
+	</strong>
+   <div id="map">
+   <style>#map { height: 400px; }  </style>
+   <script type="text/javascript" >
+   	var map = L.map('map').setView([51.969103, 7.595748],16);
+	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 20,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+		}).addTo(map);
+
+	L.marker([51.969103, 7.595748]).addTo(map).bindPopup("IfGi").openPopup();
+	L.marker([51.963772, 7.613425]).addTo(map).bindPopup("Schloss").openPopup();
+   </script>
+   </div>
+   </br>
+   <p> <a href="http://www.stadtwerke-muenster.de/fis/5991" class="button">Bushaltestelle Mendelstraﬂe</a>
+		<a href="http://www.stadtwerke-muenster.de/fis/1362" class="button">Bushaltestelle Landgericht</a></p> 
+   <p> Raumpl‰ne? </p>
+  </div>
+
+          </div>
+
+    </div>
+  </div>
+  </div>
+  
+  
+ 
+   <!-- Footer -->
+   
+  <ul class="breadcrumbs">
+  <li class="current"><a href="#">Home</a></li>
+  <li><a href="Kontakt.html">Kontakt</a></li>
+  <li><a href="Impressum.html">Impressum</a></li>
+  <li><a href="FAQ.html">FAQ</a></li>
+</ul>
+
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script src="js/foundation/foundation.interchange.js"></script>
+  <script src="js/foundation/foundation.offcanvas.js"></script>
+  <script>
+    $(document).foundation();
+    $("#swap").on("replace", function() {
+      $(document).foundation();
+    });
+  </script>
+</body>
+</html>
