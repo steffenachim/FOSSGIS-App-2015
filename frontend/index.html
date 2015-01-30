@@ -6,7 +6,7 @@
   <title>FOSSGIS 2015</title>
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/screen.css">
   <script src="js/vendor/modernizr.js"></script>
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
@@ -27,10 +27,10 @@ Verschiebt alles nach links
   <div class="large-12 columns">
   <br>
     
-    <dl class="tabs"  align="center" data-tab data-options="deep_linking:true" data-options="scroll_to_content: false">
-        <dd class="active"><a href="#News">Aktuelles</a></dd>
+    <dl class="tabs" data-tab data-options="scroll_to_content: false">
+        <dd class="content active"><a href="#News">Aktuelles</a></dd>
         <dd>         <a href="#Veranstaltungen">Veranstaltungen</a></dd>
-        <dd>         <a href="#Navigation">Navigation</a></dd>
+        <dd>         <a href="#navigation" onClick="navigation()">Navigation</a></dd>
 		<dd>		 <a href="#schwarzesBrett">Schwarzes Brett</a></dd>
     </dl>
       <div class="tabs-content">
@@ -202,33 +202,20 @@ Verschiebt alles nach links
  
   
   
-  <div class="content" id="Navigation">
+  <div class="content" id="navigation">
 	<strong class="hide-for-small-only">
 		<figure>
-				<img width="880" height="130" alt="BannerFOSSGISMUENSTERNavigation" src="img/BannerFOSSGISMUENSTERNavigation.jpg"/>
-	
+			<img width="880" height="130" alt="BannerFOSSGISMUENSTERNavigation" src="img/BannerFOSSGISMUENSTERNavigation.jpg"/>
 		</figure>
 	</strong>
-   <div id="map">
-   <style>#map { height: 400px; }  </style>
-   <script type="text/javascript" >
-   	var map = L.map('map').setView([51.969103, 7.595748],16);
-	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			maxZoom: 20,
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
-		}).addTo(map);
-
-	L.marker([51.969103, 7.595748]).addTo(map).bindPopup("IfGi").openPopup();
-	L.marker([51.963772, 7.613425]).addTo(map).bindPopup("Schloss").openPopup();
-   </script>
-   </div>
-   </br>
-   <p> <a href="http://www.stadtwerke-muenster.de/fis/5991" class="button">Bushaltestelle Mendelstraße</a>
-		<a href="http://www.stadtwerke-muenster.de/fis/1362" class="button">Bushaltestelle Landgericht</a></p> 
-   <p> Raumpläne? </p>
+   	<div id="map" style="width: 100%; height: 400px"></div>
+   	<br>
+   	<p>
+   		<a href="http://www.stadtwerke-muenster.de/fis/5991" class="button">Bushaltestelle Mendelstraße</a>
+		<a href="http://www.stadtwerke-muenster.de/fis/1362" class="button">Bushaltestelle Landgericht</a>
+	</p> 
+   	<p> Raumpläne? </p>
   </div>
-
-
             
       <div class="content" id="schwarzesBrett">
 	    <strong class="hide-for-small-only">
@@ -243,42 +230,100 @@ Verschiebt alles nach links
 			  <li class="accordion-navigation">
 				<a href="schwarzesBrett#panel1">Kommentar erstellen</a>
 				<div id="panel1" class="content">
-				 <form>
-					  <div class="row">
+				<form>
+					<div class="row">
 						<div class="large-12 columns">
-						  <label>Überschrift
-							<input type="text" placeholder="Thema" />
-						  </label>
+						  	<label>Überschrift
+						  		<input type="text" placeholder="Thema" />
+						  	</label>
 						</div>
-					  </div>
+					</div>
 
-					  <div class="row">
+					<div class="row">
 						<div class="large-12 columns">
-						  <label>Notiz
-							<textarea placeholder="Inhalt"></textarea>
-						  </label>
+						  	<label>Notiz
+								<textarea placeholder="Inhalt"></textarea>
+						  	</label>
 						</div>
-					  </div>
-					  <div class="row">
-					  </br>
-					  <input type="submit" name="submit1" style="BACKGROUND-COLOR: #FA751A; COLOR: white" value="Abschicken" class="default button">
-					  </div>
-				 </form>
+					</div>
+					<div class="row">
+					  	<br>
+					  	<input type="submit" name="submit1" style="BACKGROUND-COLOR: #FA751A; COLOR: white" value="Abschicken" class="default button">
+					</div>
+				</form>
 			    </div>
 			  </li>
 			</ul> 
 			</li>			
 			</ul>
-			
-	
 	  </div>
-        </div>
+
+ 	</div>
 
     </div>
-  </div>
-  </div>
+
+  	</div>
   
-  
+  	<script>
+
+   	var map = L.map('map').setView([51.96561, 7.60492],14);
+	//load and display tile layers on the map
+                var mapBox = L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+                  zIndex: 1,
+                  maxZoom: 20,
+                  attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+                    '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                    'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+                  id: 'examples.map-i875mjb7'
+                }).addTo(map);
+
+                var aerial = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png', {
+                  zIndex: 1,
+                  maxZoom: 18,
+                  attribution: 'Map data © <a href="http://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9">ArcGis Map Service</a> contributors, ' +
+                    '<a href="http://www.esri.com/legal/software-license">Esri Master License Agreement</a>, ' +
+                    'Imagery © <a href="http://www.esri.com/">ESRI</a>'
+                });
+
+                var OSM = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                  zIndex: 1,
+                  maxZoom: 20,
+                  attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+                    '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,'
+                });
+
+                // crate a baseLayer-variable in which all the basemap-tile-layers are stored
+                var baseLayers = {
+                  "OSM MapBox": mapBox,
+                  "ESRI Aerial": aerial,
+                  "OSM Standard": OSM
+                };
+
+                // initialize the layer-control toolbar
+                L.control.layers(baseLayers).addTo(map);
+
+	L.marker([51.969103, 7.595748]).addTo(map).bindPopup("GEO1");
+	L.marker([51.963772, 7.613425]).addTo(map).bindPopup("Schloss - WWU Münster");
+	L.marker([51.9621562,7.6142536]).addTo(map).bindPopup("Bushaltestelle: Landgericht"); 
+	L.marker([51.9690488,7.5963293]).addTo(map).bindPopup("Bushaltestelle: Mendelstraße");
+
+	var popup = L.popup();
+
+                function onMapClick(e) {
+                  popup
+                  .setLatLng(e.latlng)
+                  .setContent("You clicked the map at " + e.latlng.toString())
+                  .openOn(map);
+                }
+
+                map.on('click', onMapClick);
+
+
+	function navigation() {
+		map.invalidateSize(true);
+	}
+
+   </script>
  
    <!-- Footer -->
    
