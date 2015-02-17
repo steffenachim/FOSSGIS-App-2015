@@ -36,7 +36,7 @@ html, body {
 
 html,
 body {
-  font-size: 100%; }
+  font-size: 200%; }
 
 body {
   background: white;
@@ -1104,7 +1104,7 @@ button, .button {
   padding-right: 0.5rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
-  font-size: 1rem;
+  font-size: 200%;
   background-color: #FA751A;
   border-color: #007095;
   color: white;
@@ -1803,7 +1803,7 @@ meta.foundation-mq-topbar {
   .top-bar .name {
     height: 45px;
     margin: 0;
-    font-size: 16px; }
+    font-size: 100%; }
     .top-bar .name h1 {
       line-height: 45px;
       font-size: 1.0625rem;
@@ -1869,7 +1869,7 @@ meta.foundation-mq-topbar {
     width: 100%;
     height: auto;
     display: block;
-    font-size: 16px;
+    font-size: 100%;
     margin: 0; }
   .top-bar-section .divider,
   .top-bar-section [role="separator"] {
@@ -2843,12 +2843,12 @@ meta.foundation-mq-topbar {
       background: rgba(255, 255, 255, 0.1); }
 
 .toolbar .tab-content {
-  font-size: 16px;
+  font-size: 100%;
   text-align: center; }
   .toolbar .tab-content label {
     color: #cccccc; }
   .toolbar .tab-content i {
-    font-size: 30px;
+    font-size: 200%;
     display: block;
     margin: 0 auto;
     color: #cccccc;
