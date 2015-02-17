@@ -5,7 +5,7 @@
 
 	require_once('config.php');
 	
-	$title = $_GET['title'];
+	$title = (string)$_GET['title'];
 	
 	$sql1 = "SELECT participants FROM Speech WHERE title = '".$title."'";
 	
@@ -18,7 +18,10 @@
 	$result = mysqli_query($connection, $sql);
 	
 	setcookie('title', $user, strtotime("+1 month"));
-    $_COOKIE['title'] = $title;
+	
+	$cookie = (string)$_COOKIE['title'];
+	$list = '$cookie'.', '.'§title';
+    $_COOKIE['title'] = $list;
 	
 	header("Location: index.html");
 	exit();
