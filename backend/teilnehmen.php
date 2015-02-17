@@ -20,7 +20,7 @@
 	setcookie('title', $user, strtotime("+1 month"));
 	
 	$cookie = (string)$_COOKIE['title'];
-	$list = '$cookie'.', '.'§title';
+	$list = '$cookie'.','.'§title';
     $_COOKIE['title'] = $list;
 	
 	header("Location: index.html");
