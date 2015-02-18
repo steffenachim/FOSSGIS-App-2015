@@ -38,10 +38,10 @@ Verschiebt alles nach links
   <br>
     
     <dl class="tabs" align="center" data-tab data-options="scroll_to_content: false">
-        <dd class="active"><a href="#news">Aktuelles</a></dd>
-        <dd>         <a href="#veranstaltungen">Veranstaltungen</a></dd>
-        <dd>         <a href="#navigation" onclick="navigation()">Navigation</a></dd>
-		<dd>		 <a href="#schwarzesBrett">Schwarzes Brett</a></dd>
+        <dd class="active">			<a href="#news">Aktuelles</a></dd>
+        <dd>         				<a href="#veranstaltungen">Veranstaltungen</a></dd>
+        <dd id="navigationTab">  	<a href="#navigation" onclick="navigation()">Navigation</a></dd>
+		<dd id="boardTab">		 	<a href="#schwarzesBrett">Schwarzes Brett</a></dd>
     </dl>
       <div class="tabs-content">
         <div class="content active" id="news">
@@ -271,7 +271,7 @@ Verschiebt alles nach links
 
                 <h5>Donnerstag, 12. März 2015</h5>
                 <p>Anwendertreffen:<br>
-                Von 17:30 bis 18:30 Uhr (oder später) gibt es Anwendertreffen, Sprints und BOFs. Diese können z.B. <a href="#schwarzesBrett">hier</a> selber organisiert werden.</p>
+                Von 17:30 bis 18:30 Uhr (oder später) gibt es Anwendertreffen, Sprints und BOFs. Diese können z.B. <a onClick="boardActive()">hier</a> selber organisiert werden.</p>
 
                 <p>FOSSGIS e.V. Mitgliederversammlung:<br>
                 ab 19 Uhr im Senatssaal Schloss Münster</p>
@@ -279,7 +279,21 @@ Verschiebt alles nach links
                 <h5>Freitag, 13. März 2015: Sektempfang am FOSSGIS-Stand</h5>
                 <p>Alle Mitglieder des FOSSGIS-Vereins, Freunde und Interessierte sind herzlich eingeladen.</p>
  	  
-		  
+		  <script>
+
+		  		function boardActive() {
+
+		  			$("#news").removeClass( "content active" ).addClass( "content" );
+		  			$("#veranstaltungen").removeClass( "content active" ).addClass( "content" );
+		  			$("#navigation").removeClass( "content active" ).addClass( "content" );
+		  			$("#schwarzesBrett").removeClass( "content" ).addClass( "content active" );
+		  			$("#navigationTab").removeClass( "active" );
+		  			$("#boardTab").addClass( "active" );
+
+		  		}
+
+		  </script>		  
+
 		  <script>
 
                 //initialize map
