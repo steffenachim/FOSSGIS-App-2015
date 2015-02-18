@@ -39,9 +39,9 @@
         obj = JSON.parse(data);
         console.log(obj);
         obj.forEach( function(speech) {
-          $(target).append("<div class='row'><div class='large-8 columns'><form action='../../backend/teilnehmen.php' method='get'><input type=hidden id=title name=title value="+speech.title+">"+speech.start+" : "+speech.title+"</div><div class='large-4 columns'><a href='#' class='button openmodal' data-reveal-id='infos"+speech.number+"-"+target.slice(1,target.length)+"'> weitere Informationen</a> <input type='submit' id='filter' class='button' value='Teilnehmen'></form></div></div>");
+          $(target).append("<div class='row'><div class='large-8 columns'><p>"+speech.start+" : "+speech.title+"</div><div class='large-4 columns'><a href='#' class='button openmodal' data-reveal-id='infos"+speech.number+"-"+target.slice(1,target.length)+"'> weitere Informationen</a> <form action='../../backend/teilnehmen.php' method='get'><input type=hidden id=title name=title value="+speech.title+"><input type='submit' id='filter' class='button' value='Teilnehmen'></form></p></div></div>");
           $(target).append("<div id='infos"+speech.number+"-"+target.slice(1,target.length)+"' class='reveal-modal' data-reveal><h2>"+speech.title+"</h2><p class='lead'>"+speech.subtitle+"</p><p>Dauer: "+speech.duration+"</p><p>Referent: "+speech.name+"</p><p>"+speech.description+"</p><a class='close-reveal-modal'>&#215;</a></div>");
-          $('a.openmodal').on("click", function (evt) {
+		  $('a.openmodal').on("click", function (evt) {
             evt.preventDefault();
             modal = evt.target.attributes[2].value;
             $("#"+modal).foundation('reveal', 'open');
