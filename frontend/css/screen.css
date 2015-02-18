@@ -25,7 +25,7 @@ div#wrap {
 
 a:link,
 a:visited {
-	color: #43c5dd;
+	color: #000000;
 
 	transition: color 0.2s ease;
 	-moz-transition: color 0.2s ease; /* Firefox 4 */

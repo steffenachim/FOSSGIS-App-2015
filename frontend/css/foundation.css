@@ -1131,10 +1131,10 @@ button, .button {
       color: white; }
   button.alert, .button.alert {
     background-color: ##EE7F00;
-    border-color: #cf2a0e;
+    border-color: #EE7F00;
     color: white; }
     button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
-      background-color: #cf2a0e; }
+      background-color: #EE7F00; }
     button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
       color: white; }
   button.warning, .button.warning {
@@ -1226,13 +1226,13 @@ button, .button {
         background-color: #43ac6a; }
     button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
       background-color: ##EE7F00;
-      border-color: #cf2a0e;
+      border-color: #EE7F00;
       color: white;
       cursor: default;
       opacity: 0.7;
       box-shadow: none; }
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
-        background-color: #cf2a0e; }
+        background-color: #EE7F00; }
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
         color: white; }
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
@@ -1918,10 +1918,10 @@ meta.foundation-mq-topbar {
           color: white; }
       .top-bar-section ul li > a.button.alert {
         background-color: ##EE7F00;
-        border-color: #cf2a0e;
+        border-color: #EE7F00;
         color: white; }
         .top-bar-section ul li > a.button.alert:hover, .top-bar-section ul li > a.button.alert:focus {
-          background-color: #cf2a0e; }
+          background-color: #EE7F00; }
         .top-bar-section ul li > a.button.alert:hover, .top-bar-section ul li > a.button.alert:focus {
           color: white; }
       .top-bar-section ul li > a.button.warning {
@@ -1961,10 +1961,10 @@ meta.foundation-mq-topbar {
           color: white; }
       .top-bar-section ul li > button.alert {
         background-color: ##EE7F00;
-        border-color: #cf2a0e;
+        border-color: #EE7F00;
         color: white; }
         .top-bar-section ul li > button.alert:hover, .top-bar-section ul li > button.alert:focus {
-          background-color: #cf2a0e; }
+          background-color: #EE7F00; }
         .top-bar-section ul li > button.alert:hover, .top-bar-section ul li > button.alert:focus {
           color: white; }
       .top-bar-section ul li > button.warning {
@@ -2250,7 +2250,8 @@ meta.foundation-mq-topbar {
     text-transform: uppercase;
     color: #000000; }
     .breadcrumbs > *:hover a, .breadcrumbs > *:focus a {
-      text-decoration: underline; }
+      text-decoration: underline;
+	  color: #ffffff;	  }
     .breadcrumbs > * a {
       color: #000000; }
     .breadcrumbs > *.current {
@@ -2260,15 +2261,16 @@ meta.foundation-mq-topbar {
         cursor: default;
         color: #ffffff; }
       .breadcrumbs > *.current:hover, .breadcrumbs > *.current:hover a, .breadcrumbs > *.current:focus, .breadcrumbs > *.current:focus a {
-        text-decoration: none; }
+        text-decoration: none; 
+		color: #ffffff; }
     .breadcrumbs > *.unavailable {
-      color: #999900; }
+      color: #ffffff; }
       .breadcrumbs > *.unavailable a {
-        color: #999900; }
+        color: #ffffff; }
       .breadcrumbs > *.unavailable:hover, .breadcrumbs > *.unavailable:hover a, .breadcrumbs > *.unavailable:focus,
       .breadcrumbs > *.unavailable a:focus {
         text-decoration: none;
-        color: #999900;
+        color: #ffffff;
         cursor: default; }
     .breadcrumbs > *:before {
       content: "/";
