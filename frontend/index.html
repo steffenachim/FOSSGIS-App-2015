@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="//rawgithub.com/domoritz/leaflet-locatecontrol/gh-pages/dist/L.Control.Locate.ie.min.css"/>
   <![endif]-->
   <script src="js/vendor/locate/dist/L.Control.Locate.min.js" ></script>
-  <script src="phonegap.js" type="text/javascript"></script>
+  <!--script src="phonegap.js" type="text/javascript"></script-->
 
 </head>
 <body >
@@ -89,7 +89,7 @@ Verschiebt alles nach links
 			<a href="#panel1">Mittwoch</a>
 			<div id="panel1" class="content active">
 			 <dl class="tabs" data-tab>
-				<dd class="active"><a href="#panel1-1">Aula</a></dd>
+				<dd><a href="#panel1-1" onClick="tabsActive()">Aula</a></dd>
 				<dd><a href="#panel1-2">S10</a></dd>
 				<dd><a href="#panel1-3">S1</a></dd>
 				<dd><a href="#panel1-4">S2</a></dd>
@@ -98,12 +98,8 @@ Verschiebt alles nach links
 				<dd><a href="#panel1-7">StudLab 3</a></dd>
 			</dl>
 			  <div class="tabs-content">
-				<div class="content active" id="panel1-1">
-				<!--<script>
-					$('#panel1-1').on('toggled', function (set active, #panel2-1) {
-						console.log(tab);
-					});
-				</script> -->
+				<div class="content" id="panel1-1">
+				 
 				</div>
 				<div class="content" id="panel1-2">
 
@@ -131,34 +127,34 @@ Verschiebt alles nach links
 			<div id="panel2" class="content">
 
 		   <dl class="tabs" data-tab>
-				<dd class="active"><a href="#panel2-1">Aula</a></dd>
-				<dd><a href="#panel1-2">S10</a></dd>
-				<dd><a href="#panel1-3">S1</a></dd>
-				<dd><a href="#panel1-4">S2</a></dd>
-				<dd><a href="#panel1-5">StudLab 1</a></dd>
-				<dd><a href="#panel1-6">StudLab 2</a></dd>
-				<dd><a href="#panel1-7">StudLab 3</a></dd>
+				<dd><a href="#panel2-1">Aula</a></dd>
+				<dd><a href="#panel2-2">S10</a></dd>
+				<dd><a href="#panel2-3">S1</a></dd>
+				<dd><a href="#panel2-4">S2</a></dd>
+				<dd><a href="#panel2-5">StudLab 1</a></dd>
+				<dd><a href="#panel2-6">StudLab 2</a></dd>
+				<dd><a href="#panel2-7">StudLab 3</a></dd>
 			</dl> 
 			  <div class="tabs-content">
-				<div class="content active" id="panel2-1">
+				<div class="content" id="panel2-1">
 
 				</div>
-				<div class="content" id="panel1-2">
+				<div class="content" id="panel2-2">
 
 				</div>
-				<div class="content" id="panel1-3">
+				<div class="content" id="panel2-3">
 
 				</div>
-				<div class="content" id="panel1-4">
+				<div class="content" id="panel2-4">
 
 				</div>
-				<div class="content" id="panel1-5">
+				<div class="content" id="panel2-5">
 
 				</div>
-				<div class="content" id="panel1-6">
+				<div class="content" id="panel2-6">
 
 				</div>
-				<div class="content" id="panel1-7">
+				<div class="content" id="panel2-7">
 
 				</div>
 			  </div>
@@ -171,34 +167,34 @@ Verschiebt alles nach links
 			<div id="panel3" class="content">
 
 			  <dl class="tabs" data-tab>
-				<dd class="active"><a href="#panel1-1">Aula</a></dd>
-				<dd><a href="#panel1-2">S10</a></dd>
-				<dd><a href="#panel1-3">S1</a></dd>
-				<dd><a href="#panel1-4">S2</a></dd>
-				<dd><a href="#panel1-5">StudLab 1</a></dd>
-				<dd><a href="#panel1-6">StudLab 2</a></dd>
-				<dd><a href="#panel1-7">StudLab 3</a></dd>
+				<dd><a href="#panel3-1">Aula</a></dd>
+				<dd><a href="#panel3-2">S10</a></dd>
+				<dd><a href="#panel3-3">S1</a></dd>
+				<dd><a href="#panel3-4">S2</a></dd>
+				<dd><a href="#panel3-5">StudLab 1</a></dd>
+				<dd><a href="#panel3-6">StudLab 2</a></dd>
+				<dd><a href="#panel3-7">StudLab 3</a></dd>
 			</dl> 
 			  <div class="tabs-content">
-				<div class="content active" id="panel1-1">
+				<div class="content" id="panel3-1">
 
 				</div>
-				<div class="content" id="panel1-2">
+				<div class="content" id="panel3-2">
 
 				</div>
-				<div class="content" id="panel1-3">
+				<div class="content" id="panel3-3">
 
 				</div>
-				<div class="content" id="panel1-4">
+				<div class="content" id="panel3-4">
 
 				</div>
-				<div class="content" id="panel1-5">
+				<div class="content" id="panel3-5">
 
 				</div>
-				<div class="content" id="panel1-6">
+				<div class="content" id="panel3-6">
 
 				</div>
-				<div class="content" id="panel1-7">
+				<div class="content" id="panel3-7">
 
 				</div>
 			  </div>
@@ -207,6 +203,12 @@ Verschiebt alles nach links
 			
   
  </div>
+ 
+				<script>
+					function tabsActive () {
+						$("#panel2-1").removeClass("content").addClass("content active");
+					}
+				</script>
 
  
         
@@ -787,5 +789,6 @@ Verschiebt alles nach links
       $(document).foundation();
     });
   </script>
+  <script type="text/javascript" src="js/menu.js"></script>
 </body>
 </html>
