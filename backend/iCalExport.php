@@ -14,19 +14,20 @@
     $ititles = $_COOKIE['title'];
     $titles = explode(",", $ititles);
     $maxi = count($titles);
+	$sql = ""
     for ($i=0; $i <= $maxi; $i++)
     {
-    $sql = "
-    Select title, date, start
-    From Speech
-    Where title = $titles[$i]    
-    ";
-    
-    echo $titles[$i];
-        }
+		$sql = $sql."
+		Select title, date, start, room_id
+		From Speech
+		Where title = $titles[$i];";
+		echo $titles[$i];
+    }
+		
+	$result = mysqli_query($connection, $sql);
 	   
             
-    while($row = mysql_fetch_array($query)){
+    while($row = mysqli_fetch_array($result)){
 
     echo 
     "
