@@ -38,10 +38,18 @@ Verschiebt alles nach links
   <br>
     
     <dl class="tabs" align="center" data-tab data-options="scroll_to_content: false">
-        <dd class="active">			<a href="#news">Aktuelles</a></dd>
-        <dd>         				<a href="#veranstaltungen">Veranstaltungen</a></dd>
-        <dd id="navigationTab" onclick="navigation()">  	<a href="#navigation">Navigation</a></dd>
-		<dd id="boardTab">		 	<a href="#schwarzesBrett">Schwarzes Brett</a></dd>
+        <dd class="active" style="overflow: hidden">
+        	<a href="#news">Aktuelles</a>
+        </dd>
+        <dd style="overflow: hidden">
+        	<a href="#veranstaltungen">Veranstaltungen</a>
+        </dd>
+        <dd id="navigationTab" onclick="navigation()" style="overflow: hidden">
+        	<a href="#navigation">Navigation</a>
+        </dd>
+		<dd id="boardTab" style="overflow: hidden">
+			<a href="#schwarzesBrett">Schwarzes Brett</a>
+		</dd>
     </dl>
       <div class="tabs-content">
         <div class="content active" id="news">
@@ -898,7 +906,7 @@ Verschiebt alles nach links
                 L.control.layers(baseLayers, overlayMaps).addTo(map);
 
                 // initialize the location toolbar
-                L.control.locate({follow: true}).addTo(map);
+                var lc = L.control.locate({follow: true}).addTo(map);
                 map.on('dragstart', lc._stopFollowing, lc);
                 
                 //recenter map on tab active
@@ -959,6 +967,7 @@ Verschiebt alles nach links
   
  
    <!-- Footer -->
+   <div class="row">
    
   	<ul class="breadcrumbs">
   		<li class="current"><a href="">Home</a></li>
@@ -967,8 +976,6 @@ Verschiebt alles nach links
 	</ul>
 
     </div>
- 
-	</div>
 	
   <script src="js/vendor/jquery.js"></script>
   <script src="js/foundation.min.js"></script>

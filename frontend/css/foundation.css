@@ -3294,18 +3294,22 @@ meta.foundation-mq-topbar {
   .tabs dd, .tabs .tab-title {
     position: relative;
     margin-bottom: 0 !important;
+    padding-right: 0;
+    padding-left: 0;
+    width: 25%; 
     list-style: none;
     float: left; }
     .tabs dd > a, .tabs .tab-title > a {
       outline: none;
-	  border: 1px solid white;
+      border: 1px solid white;
       display: block;
+      text-align: center;
       background-color: #FFFFFF;
       color: #2d3841;
-      padding: 0.001rem 1.5rem;
+      padding: 0.001rem 0rem;
       font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
       font-weight: bold;
-	  font-size: 1,3rem; }
+      font-size: 1,3rem; }
       .tabs dd > a:hover, .tabs .tab-title > a:hover {
         background-color: #2d3841;
 		color: #FFFFFF;		}
