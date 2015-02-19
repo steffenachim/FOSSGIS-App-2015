@@ -140,7 +140,7 @@ Verschiebt alles nach links
 
 		   <dl class="tabs" data-tab>
 				<dd id="panel2-1tab" onClick="tabActive1()"><a href="#panel2-1" style="padding-bottom: 0.52rem; padding-top: 0.52rem">Aula</a></dd>
-				<dd id="panel2-2tab" onClick="tabActive3()"><a href="#panel2-2" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S10</a></dd>
+				<dd id="panel2-2tab" onClick="tabActive2()"><a href="#panel2-2" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S10</a></dd>
 				<dd id="panel2-3tab" onClick="tabActive3()"><a href="#panel2-3" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S1</a></dd>
 				<dd id="panel2-4tab" onClick="tabActive4()"><a href="#panel2-4" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S2</a></dd>
 				<dd id="panel2-5tab" onClick="tabActive5()"><a href="#panel2-5" style="padding-bottom: 0.52rem; padding-top: 0.52rem">StudLab 1</a></dd>
@@ -246,12 +246,12 @@ Verschiebt alles nach links
 				</script>
 				<script>
 					function tabActive2 () {
+						$("#panel1-2").removeClass("content").addClass("content active");
+						$("#panel1-2tab").addClass("active");
 						$("#panel2-2").removeClass("content").addClass("content active");
 						$("#panel2-2tab").addClass("active");
 						$("#panel3-2").removeClass("content").addClass("content active");
 						$("#panel3-2tab").addClass("active");
-						$("#panel1-2").removeClass("content").addClass("content active");
-						$("#panel1-2tab").addClass("active");
 						$("#panel1-1tab").removeClass("active");
 						$("#panel1-3tab").removeClass("active");
 						$("#panel1-4tab").removeClass("active");
@@ -274,12 +274,12 @@ Verschiebt alles nach links
 				</script>
 				<script>
 					function tabActive3 () {
+						$("#panel1-3").removeClass("content").addClass("content active");
+						$("#panel1-3tab").addClass("active");
 						$("#panel2-3").removeClass("content").addClass("content active");
 						$("#panel2-3tab").addClass("active");
 						$("#panel3-3").removeClass("content").addClass("content active");
 						$("#panel3-3tab").addClass("active");
-						$("#panel1-3").removeClass("content").addClass("content active");
-						$("#panel1-3tab").addClass("active");
 						$("#panel1-1tab").removeClass("active");
 						$("#panel1-2tab").removeClass("active");
 						$("#panel1-4tab").removeClass("active");
@@ -302,12 +302,12 @@ Verschiebt alles nach links
 				</script>
 				<script>
 					function tabActive4 () {
+						$("#panel1-4").removeClass("content").addClass("content active");
+						$("#panel1-4tab").addClass("active");
 						$("#panel2-4").removeClass("content").addClass("content active");
 						$("#panel2-4tab").addClass("active");
 						$("#panel3-4").removeClass("content").addClass("content active");
 						$("#panel3-4tab").addClass("active");
-						$("#panel1-4").removeClass("content").addClass("content active");
-						$("#panel1-4tab").addClass("active");
 						$("#panel1-1tab").removeClass("active");
 						$("#panel1-2tab").removeClass("active");
 						$("#panel1-3tab").removeClass("active");
@@ -330,86 +330,86 @@ Verschiebt alles nach links
 				</script>
 				<script>
 					function tabActive5 () {
+						$("#panel1-5").removeClass("content").addClass("content active");
+						$("#panel1-5tab").addClass("active");
 						$("#panel2-5").removeClass("content").addClass("content active");
 						$("#panel2-5tab").addClass("active");
 						$("#panel3-5").removeClass("content").addClass("content active");
 						$("#panel3-5tab").addClass("active");
-						$("#panel1-5").removeClass("content").addClass("content active");
-						$("#panel1-5tab").addClass("active");
 						$("#panel1-1tab").removeClass("active");
 						$("#panel1-2tab").removeClass("active");
-						$("#panel1-4tab").removeClass("active");
 						$("#panel1-3tab").removeClass("active");
+						$("#panel1-4tab").removeClass("active");
 						$("#panel1-6tab").removeClass("active");
 						$("#panel1-7tab").removeClass("active");
 						$("#panel2-1tab").removeClass("active");
 						$("#panel2-2tab").removeClass("active");
-						$("#panel2-4tab").removeClass("active");
 						$("#panel2-3tab").removeClass("active");
+						$("#panel2-4tab").removeClass("active");
 						$("#panel2-6tab").removeClass("active");
 						$("#panel2-7tab").removeClass("active");
 						$("#panel3-1tab").removeClass("active");
 						$("#panel3-2tab").removeClass("active");
-						$("#panel3-4tab").removeClass("active");
 						$("#panel3-3tab").removeClass("active");
+						$("#panel3-4tab").removeClass("active");
 						$("#panel3-6tab").removeClass("active");
 						$("#panel3-7tab").removeClass("active");
 					}
 				</script>
 				<script>
 					function tabActive6 () {
+						$("#panel1-6").removeClass("content").addClass("content active");
+						$("#panel1-6tab").addClass("active");
 						$("#panel2-6").removeClass("content").addClass("content active");
 						$("#panel2-6tab").addClass("active");
 						$("#panel3-6").removeClass("content").addClass("content active");
 						$("#panel3-6tab").addClass("active");
-						$("#panel1-6").removeClass("content").addClass("content active");
-						$("#panel1-6tab").addClass("active");
 						$("#panel1-1tab").removeClass("active");
 						$("#panel1-2tab").removeClass("active");
+						$("#panel1-3tab").removeClass("active");
 						$("#panel1-4tab").removeClass("active");
 						$("#panel1-5tab").removeClass("active");
-						$("#panel1-3tab").removeClass("active");
 						$("#panel1-7tab").removeClass("active");
 						$("#panel2-1tab").removeClass("active");
 						$("#panel2-2tab").removeClass("active");
+						$("#panel2-3tab").removeClass("active");
 						$("#panel2-4tab").removeClass("active");
 						$("#panel2-5tab").removeClass("active");
-						$("#panel2-3tab").removeClass("active");
 						$("#panel2-7tab").removeClass("active");
 						$("#panel3-1tab").removeClass("active");
 						$("#panel3-2tab").removeClass("active");
+						$("#panel3-3tab").removeClass("active");
 						$("#panel3-4tab").removeClass("active");
 						$("#panel3-5tab").removeClass("active");
-						$("#panel3-3tab").removeClass("active");
 						$("#panel3-7tab").removeClass("active");
 					}
 				</script>
 				<script>
 					function tabActive7 () {
+						$("#panel1-7").removeClass("content").addClass("content active");
+						$("#panel1-7tab").addClass("active");
 						$("#panel2-7").removeClass("content").addClass("content active");
 						$("#panel2-7tab").addClass("active");
 						$("#panel3-7").removeClass("content").addClass("content active");
 						$("#panel3-7tab").addClass("active");
-						$("#panel1-7").removeClass("content").addClass("content active");
-						$("#panel1-7tab").addClass("active");
 						$("#panel1-1tab").removeClass("active");
 						$("#panel1-2tab").removeClass("active");
+						$("#panel1-3tab").removeClass("active");
 						$("#panel1-4tab").removeClass("active");
 						$("#panel1-5tab").removeClass("active");
 						$("#panel1-6tab").removeClass("active");
-						$("#panel1-3tab").removeClass("active");
 						$("#panel2-1tab").removeClass("active");
 						$("#panel2-2tab").removeClass("active");
+						$("#panel2-3tab").removeClass("active");
 						$("#panel2-4tab").removeClass("active");
 						$("#panel2-5tab").removeClass("active");
 						$("#panel2-6tab").removeClass("active");
-						$("#panel2-3tab").removeClass("active");
 						$("#panel3-1tab").removeClass("active");
 						$("#panel3-2tab").removeClass("active");
+						$("#panel3-3tab").removeClass("active");
 						$("#panel3-4tab").removeClass("active");
 						$("#panel3-5tab").removeClass("active");
 						$("#panel3-6tab").removeClass("active");
-						$("#panel3-3tab").removeClass("active");
 					}
 				</script>
  
@@ -419,7 +419,10 @@ Verschiebt alles nach links
           <div id="map" style="width: 100%; margin-top:10px"></div>
           <br/>
 
-                <h3>Anreise</h3>
+            <dl class="accordion" data-accordion data-options="scroll_to_content: true">
+		  		<dd class="accordion-navigation">
+				<a href="#panelN1">Anreise</a>
+				<div id="panelN1" class="content">
 
                 <h5>Anreise mit dem Auto</h5>
                 <p class="text-justify">Die Autobahn A 43 endet direkt im Süden Münsters und die Autobahn A 1 bietet die Anschlussstellen Münster Nord und Münster Süd. Allerdings sind die verfügbaren Parkplätze am alten Schloss in Münster zur Zeit der Konferenz sehr begrenzt. Es empfiehlt sich daher auf den Bus umzusteigen (Tickets werden voraussichtlich kostenlos für die Dauer der Konferenz zur Verfügung gestellt) oder sich unter die Münsteraner zu mischen und per Rad (Leeze) zum Schloss zu fahren.</p>
@@ -445,7 +448,12 @@ Verschiebt alles nach links
                     <li>Niederrhein (NRN, kleiner Ryanair Flughafen, ~3:30 Stunden mit der Bahn)</li>
                 </ul>
 
-                <h3>Unterkunft</h3>
+                </div>
+		  		</dd>
+		   		<dd class="accordion-navigation">
+				<a href="#panelN2">Unterkunft</a>
+				<div id="panelN2" class="content">
+
                 <p class="text-justify">Münster Marketing hält bis zum 10.02.2015 <a href="http://germany.nethotels.com/info/muenster/events/FOSSGIS/" target="_blank">Kontingente für die FOSSGIS</a> bereit.</p>
                 <p class="text-justify">Weitere Frühbucherkontingente sind unter dem Stichwort “FOSSGIS 2015” bis Ende Januar bei folgenden Hotels reserviert:</p>
 
@@ -453,7 +461,11 @@ Verschiebt alles nach links
                 <h5><a href="http://www.agora-muenster.de/index.php" target="_blank">Agora - das Hotel am Aasee</a></h5><p class="text-justify">(1,2 km 15 min)<br>inkl. Frühstück, Bettwäsche, Handtücher<br>verschiedene Einzelzimmer: ab 69,00 €/Person/Nacht<br>verschiedene Doppelzimmer: ab 54,50 €/Person/Nacht (in Einzelbelegung: ab 79,00 €/Person/Nacht)</p>
                 <h5><a href="http://www.djh-wl.de/de/jugendherbergen/muenster" target="_blank">Jugend Gästehaus Aasee</a></h5><p class="text-justify">(1,4 km, 17 min)<br>inkl. Frühstück, Bettwäsche, Handtücher, Badezimmer mit Dusche und WC je Zimmer:<br>Doppelzimmer: 35,70 €/Person/Nacht (in Einzelbelegung: 52,80 €/Person/Nacht)<br>Vierbettzimmer: 30,40 €/Person/Nacht</p>
 
-                <h3>Social Events</h3>
+                </div>
+		  		</dd>
+		   		<dd class="accordion-navigation">
+				<a href="#panel3N">Social Events</a>
+				<div id="panel3N" class="content">
 
                 <h5>Dienstag, 10. März 2015 ab 19:30 Uhr: Inoffizieller Start</h5>
                 <p class="text-justify">Gemeinsames Abendessen für alle schon anwesenden FOSSGISler in der <a href="http://pinkus.de/gaststaette/altbierkueche/" target="_blank">Gaststätte Pinkus Müller</a></p>
@@ -470,6 +482,11 @@ Verschiebt alles nach links
 
                 <h5>Freitag, 13. März 2015: Sektempfang am FOSSGIS-Stand</h5>
                 <p class="text-justify">Alle Mitglieder des FOSSGIS-Vereins, Freunde und Interessierte sind herzlich eingeladen.</p>
+
+                </div>
+		  		</dd>
+		  	</dl>
+
  	  
 		  <script>
 
@@ -991,7 +1008,12 @@ Verschiebt alles nach links
   <script src="js/foundation/foundation.interchange.js"></script>
   <script src="js/foundation/foundation.offcanvas.js"></script>
   <script>
-    $(document).foundation();
+    $(document).foundation({
+  		accordion: {
+    		// allow multiple accordion panels to be active at the same time
+    		multi_expand: true
+  		}
+	});
     $("#swap").on("replace", function() {
       $(document).foundation();
     });
