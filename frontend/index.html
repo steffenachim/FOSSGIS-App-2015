@@ -12,7 +12,7 @@
 	<script src="js/vendor/modernizr.js"></script>
 	<link rel="stylesheet" href="css/leaflet.css" />
 	<script src="css/leaflet.js"></script>
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css">
+	<link rel="stylesheet" href="css/font-awesome-4.3.0/css/font-awesome.css">
 	<link rel="stylesheet" href="css/leaflet.awesome-markers.css">
 	<script src="css/leaflet.awesome-markers.js"></script>
 	<link rel="stylesheet" href="js/vendor/locate/dist/L.Control.Locate.css" />
@@ -55,18 +55,7 @@
 
       <div class="tabs-content">
         <div class="content active" id="news">
-		  		<div>
-						<p class="text-justify">
-							Die FOSSGIS-Konferenz ist im D-A-CH-Raum die führende Konferenz für Freie und Open Source Software für Geoinformationssysteme sowie für die Themen Open Data und OpenStreetMap.
-						</p>
-						<p class="text-justify">
-							Die FOSSGIS-Konferenz 2015 wird vom gemeinnützigen Verein <a href="http://www.fossgis.de/" target="_blank">FOSSGIS e.V</a>, der <a href="http://www.openstreetmap.de/" target="_blank">OpenStreetMap Community</a> und der <a href="http://www.osgeo.org/" target="_blank">Open Source Geospatial Foundation (OSGeo)</a> in Zusammenarbeit mit dem <a href="http://www.uni-muenster.de/Geoinformatics/" target="_blank">Institut für Geoinformatik</a> und der <a href="http://www.uni-muenster.de/de/" target="_blank">Universität Münster </a> organisiert.
-						</p>
-						<p class="text-justify">
-							Die Konferenz wird vorwiegend durch ehrenamtliches Engagement getragen, wobei neben den Teilnehmergebühren, die Spenden- und vor allem die Sponsoren- und Ausstellerstandeinnahmen eine wichtige finanzielle Einnahmequelle darstellen, um die Kosten für die Konferenz zu decken und darüber hinaus Open Source Projekte zu fördern. <a href="http://www.fossgis.de/konferenz/2015/" target="_blank">Hier</a> geht's zur offiziellen Webpräsenz der FOSSGIS Konferenz 2015.
-						</p>
-		  		</div>
-		  		<div>
+        	<div style="margin-top:10px">
 						<a class="twitter-timeline" align="center" id="twitter-widget-0" href="https://twitter.com/FOSSGIS2015" data-widget-id="542438223738187776">Tweets von @FOSSGIS2015</a>
       			<script>
       				!function(d,s,id){
@@ -83,6 +72,18 @@
       				}(document,"script","twitter-wjs");
       			</script>
     	  	</div>
+    	  	<br/>
+		  		<div>
+						<p class="text-justify">
+							Die FOSSGIS-Konferenz ist im D-A-CH-Raum die führende Konferenz für Freie und Open Source Software für Geoinformationssysteme sowie für die Themen Open Data und OpenStreetMap.
+						</p>
+						<p class="text-justify">
+							Die FOSSGIS-Konferenz 2015 wird vom gemeinnützigen Verein <a href="http://www.fossgis.de/" target="_blank">FOSSGIS e.V</a>, der <a href="http://www.openstreetmap.de/" target="_blank">OpenStreetMap Community</a> und der <a href="http://www.osgeo.org/" target="_blank">Open Source Geospatial Foundation (OSGeo)</a> in Zusammenarbeit mit dem <a href="http://www.uni-muenster.de/Geoinformatics/" target="_blank">Institut für Geoinformatik</a> und der <a href="http://www.uni-muenster.de/de/" target="_blank">Universität Münster </a> organisiert.
+						</p>
+						<p class="text-justify">
+							Die Konferenz wird vorwiegend durch ehrenamtliches Engagement getragen, wobei neben den Teilnehmergebühren, die Spenden- und vor allem die Sponsoren- und Ausstellerstandeinnahmen eine wichtige finanzielle Einnahmequelle darstellen, um die Kosten für die Konferenz zu decken und darüber hinaus Open Source Projekte zu fördern. <a href="http://www.fossgis.de/konferenz/2015/" target="_blank">Hier</a> geht's zur offiziellen Webpräsenz der FOSSGIS Konferenz 2015.
+						</p>
+		  		</div>
         </div> 
 	  
 				<div class="content" id="veranstaltungen">
@@ -91,7 +92,7 @@
 							<input type="text" placeholder="Finde Veranstaltungen">
 						</div>
 						<div class="large-2 columns small-12 columns">
-				  		<a href="" class="tiny button expand" id="search">Suche</a>
+				  		<a href="" class="tiny button expand" id="search">Suchen</a>
 				  			<style>
 									#search{
 									  padding-top: 0.52rem;
@@ -221,7 +222,7 @@
 	 				<br/>
 					<dl class="accordion1" data-accordion>
 						<dd class="accordion-navigation">
-							<a href="#panel4">Alle Teilnahmen</a>
+							<a href="#panel4">Meine Veranstaltungen</a>
 							<div id="panel4" class="content">
 								<div>
 									<input type="submit" value="Export Kalendar!" onclick="alert('Export Kalendar!');">
@@ -964,14 +965,14 @@
 								  <div class="row">
 										<div class="large-12 columns">
 									  	<label style="font-weight: bold">Überschrift
-												<input type="text" placeholder="Thema" />
+												<input type="text" id="title" name="title" placeholder="Thema" />
 									  	</label>
 										</div>
 								  </div>
 								  <div class="row">
 										<div class="large-12 columns">
 									  	<label style="font-weight: bold">Notiz
-												<textarea type="text" placeholder="Inhalt"></textarea>
+												<textarea type="text" id="note" name="note" placeholder="Inhalt"></textarea>
 									  	</label>
 										</div>
 								  </div>
