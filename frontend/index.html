@@ -898,7 +898,8 @@ Verschiebt alles nach links
                 L.control.layers(baseLayers, overlayMaps).addTo(map);
 
                 // initialize the location toolbar
-                L.control.locate({follow: true, setView: false, stopFollowingOnDrag: true}).addTo(map);
+                L.control.locate({follow: true}).addTo(map);
+                map.on('dragstart', lc._stopFollowing, lc);
                 
                 //recenter map on tab active
                 function navigation() {
