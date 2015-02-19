@@ -14,17 +14,26 @@
     $ititles = $_COOKIE['title'];
     $titles = explode(",", $ititles);
     $maxi = count($titles);
-	$sql = ""
+	$help = $maxi;
+	$sql = "Select title, date, start, room_id
+		From Speech
+		Where title ";
     for ($i=0; $i <= $maxi; $i++)
     {
-		$sql = $sql."
-		Select title, date, start, room_id
-		From Speech
-		Where title = $titles[$i];";
-		echo $titles[$i];
-    }
+		if ($i = $help){
+			$sql = $sql."LIKE '%".$titles[$i]."%'";
+			$sqlarray[] = $sql;
+		}else{
+			$sql = $sql."LIKE '%".$titles[$i]."%' OR ";
+		}
 		
-	$result = mysqli_query($connection, $sql);
+    }
+	$sqlfor = $sqlarray[0];
+	$sqlend = $sqlfor." GROUP BY date
+		Order by start;"
+	
+		
+	$result = mysqli_query($connection, $sqlend);
 	   
             
     while($row = mysqli_fetch_array($result)){

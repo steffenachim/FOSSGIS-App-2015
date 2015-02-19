@@ -10,6 +10,54 @@
       $date = $_GET["date"];
       echo getSpeeches($connection,$room,$date);
     }
+	if ($_GET["func"] == "getTitles") {
+		echo getTitles($connection);
+	}
+  }
+  
+  function getTitles($connection) {
+	$ititles = $_COOKIE['title'];
+    $titles = explode(",", $ititles);
+    $maxi = count($titles);
+	$help = $maxi;
+	$sql = "Select title, date, start, room_id
+		From Speech
+		Where title ";
+    for ($i=0; $i <= $maxi; $i++)
+    {
+		if ($i = $help){
+			$sql = $sql."LIKE '%".$titles[$i]."%'";
+			$sqlarray[] = $sql;
+		}else{
+			$sql = $sql."LIKE '%".$titles[$i]."%' OR ";
+		}
+		
+    }
+	$sqlfor = $sqlarray[0];
+	$sqlend = $sqlfor." GROUP BY date
+		Order by start;"
+		
+	$result = mysqli_query($connection, $sqlend);
+	   
+          
+    $number = 0;
+    $array = [];	
+    while($row = mysqli_fetch_array($result)){
+      $test = new stdClass();
+      $test->title = (string)$row[0];
+      $test->datum = (string)$row[1];
+      $test->start = (string)$row[2];
+      $test->room = (string)$row[3];
+	  $test->duration = (string)$row[4];
+	  $test->number = $number++;
+
+      array_push($array, $test);
+    }
+
+    // close connection
+    mysqli_close($connection);
+
+    return json_encode($array);
   }
 
   function getSpeeches($connection,$room, $date) {
