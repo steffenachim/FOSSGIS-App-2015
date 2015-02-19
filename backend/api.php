@@ -20,12 +20,12 @@
     $titles = explode(",", $ititles);
     $maxi = count($titles);
 	$help = $maxi;
-	$sql = "Select title, date, start, room_id
+	$sql = "Select title, date, start, room_id, duration, description
 		From Speech
 		Where title ";
     for ($i=0; $i <= $maxi; $i++)
     {
-		if ($i = $help){
+		if ($i == $help){
 			$sql = $sql."LIKE '%".$titles[$i]."%'";
 			$sqlarray[] = $sql;
 		}else{
@@ -33,9 +33,9 @@
 		}
 		
     }
-	$sqlfor = $sqlarray[0];
+	$sqlfor = (string)$sqlarray[0];
 	$sqlend = $sqlfor." GROUP BY date
-		Order by start;"
+		Order by start;";
 		
 	$result = mysqli_query($connection, $sqlend);
 	   
@@ -49,6 +49,7 @@
       $test->start = (string)$row[2];
       $test->room = (string)$row[3];
 	  $test->duration = (string)$row[4];
+	  $test->description = (string)$row[5];
 	  $test->number = $number++;
 
       array_push($array, $test);

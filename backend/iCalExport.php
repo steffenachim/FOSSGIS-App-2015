@@ -15,7 +15,7 @@
     $titles = explode(",", $ititles);
     $maxi = count($titles);
 	$help = $maxi;
-	$sql = "Select title, date, start, room_id
+	$sql = "Select title, date, start, room_id, duration
 		From Speech
 		Where title ";
     for ($i=0; $i <= $maxi; $i++)
