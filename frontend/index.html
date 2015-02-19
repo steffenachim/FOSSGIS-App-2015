@@ -27,7 +27,7 @@
 	</style>
 
 </head>
-<body >
+<body onLoad="checkDate()">
    <div class="row">
 		<img src="img/header.png" height="100%" alt="SchlossMuenster">
 		
@@ -97,9 +97,9 @@ Verschiebt alles nach links
 			  </div>
 
 		  <dl class="accordion" data-accordion>
-		  <dd class="accordion-navigation">
+		  <dd class="accordion-navigation" id="eventsWednesday">
 			<a href="#panel1">Mittwoch</a>
-			<div id="panel1" class="content active">
+			<div id="panel1" class="content">
 			 <dl class="tabs" data-tab>
 				<dd id="panel1-1tab" onClick="tabActive1()"><a href="#panel1-1" style="padding-bottom: 0.52rem; padding-top: 0.52rem">Aula</a></dd>
 				<dd id="panel1-2tab" onClick="tabActive2()"><a href="#panel1-2" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S10</a></dd>
@@ -134,7 +134,7 @@ Verschiebt alles nach links
 			  </div>
 			</div>
 		  </dd>
-		   <dd class="accordion-navigation">
+		   <dd class="accordion-navigation" id="eventsThursday">
 			<a href="#panel2">Donnerstag</a>
 			<div id="panel2" class="content">
 
@@ -174,7 +174,7 @@ Verschiebt alles nach links
 		  </dd>
 
 		  
-		  <dd class="accordion-navigation">
+		  <dd class="accordion-navigation" id="eventsFriday">
 			<a href="#panel3">Freitag</a>
 			<div id="panel3" class="content">
 
@@ -1007,13 +1007,56 @@ Verschiebt alles nach links
   <script src="js/foundation.min.js"></script>
   <script src="js/foundation/foundation.interchange.js"></script>
   <script src="js/foundation/foundation.offcanvas.js"></script>
+
   <script>
-    $(document).foundation({
+
+  	function checkDate() {
+
+  		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1; //January is 0!
+		var yyyy = today.getFullYear();
+		
+		if(dd<10) {
+		    dd='0'+dd
+		} 
+		
+		if(mm<10) {
+    		mm='0'+mm
+		} 
+
+		today = dd+'/'+mm+'/'+yyyy;
+		
+		if (today == '11/03/2015') {
+
+			$('#eventsWednesday').removeClass('content').addClass('content active');
+			$('#panel1').removeClass('content').addClass('content active');
+
+		} if (today == '12/03/2015') {
+
+			$('#eventsThursday').removeClass('content').addClass('content active');
+			$('#panel2').removeClass('content').addClass('content active');
+
+		} if (today == '13/03/2015') {
+
+			$('#eventsFriday').removeClass('content').addClass('content active');
+			$('#panel3').removeClass('content').addClass('content active');
+
+		}
+
+  	}
+
+  </script>
+
+  <script>
+  	$(document).foundation();
+  	//Erlaubt mehrere Accordeons aufzuhaben. Interferiert momentan mit dem Einladen der Veranstaltungen
+    /*$(document).foundation({
   		accordion: {
     		// allow multiple accordion panels to be active at the same time
     		multi_expand: true
   		}
-	});
+	});*/
     $("#swap").on("replace", function() {
       $(document).foundation();
     });
