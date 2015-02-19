@@ -40,7 +40,7 @@ Verschiebt alles nach links
     <dl class="tabs" align="center" data-tab data-options="scroll_to_content: false">
         <dd class="active">			<a href="#news">Aktuelles</a></dd>
         <dd>         				<a href="#veranstaltungen">Veranstaltungen</a></dd>
-        <dd id="navigationTab">  	<a href="#navigation" onclick="navigation()">Navigation</a></dd>
+        <dd id="navigationTab" onclick="navigation()">  	<a href="#navigation">Navigation</a></dd>
 		<dd id="boardTab">		 	<a href="#schwarzesBrett">Schwarzes Brett</a></dd>
     </dl>
       <div class="tabs-content">
@@ -708,7 +708,7 @@ Verschiebt alles nach links
                 L.control.layers(baseLayers, overlayMaps).addTo(map);
 
                 // initialize the location toolbar
-                L.control.locate({follow: true}).addTo(map);
+                L.control.locate({follow: true, setView: false, stopFollowingOnDrag: true}).addTo(map);
                 
                 //recenter map on tab active
                 function navigation() {
