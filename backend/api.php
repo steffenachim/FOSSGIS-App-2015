@@ -25,7 +25,7 @@
 		Where title ";
     for ($i=0; $i <= $maxi; $i++)
     {
-		if ($i = $help){
+		if ($i == $help){
 			$sql = $sql."LIKE '%".$titles[$i]."%'";
 			$sqlarray[] = $sql;
 		}else{
@@ -33,9 +33,9 @@
 		}
 		
     }
-	$sqlfor = $sqlarray[0];
+	$sqlfor = (string)$sqlarray[0];
 	$sqlend = $sqlfor." GROUP BY date
-		Order by start;"
+		Order by start;";
 		
 	$result = mysqli_query($connection, $sqlend);
 	   
