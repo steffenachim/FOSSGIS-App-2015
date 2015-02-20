@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-<!-- Import JQUERY framework and css -->
+<!-- Import JQUERY framework and css --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../backend/NoticeBoard/main.css" />
