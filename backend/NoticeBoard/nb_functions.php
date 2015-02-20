@@ -21,7 +21,7 @@ function InsertComment ($message, $author_name, $author_mail, $answer_to) {
 	 $sql = "INSERT INTO NoticeBoard (message, author_name, author_mail, answer_to) 
 	 			VALUES ('$message', '$author_name', '$author_mail', $answer_to) ";
 echo $sql;
-	 mysqli_query($GLOBALS["connection"], $sql);			
+	 mysqli_query($connection, $sql);			
 }
  
 /**
@@ -34,7 +34,7 @@ echo $sql;
 function GetComments() {
    
     $sql="SELECT * FROM NoticeBoard";
-    $result = mysqli_query($GLOBALS["connection"], $sql);
+    $result = mysqli_query($connection, $sql);
     //$result=$GLOBALS["connection"]-> mysqli_query($sql);
     return $result;
 }
