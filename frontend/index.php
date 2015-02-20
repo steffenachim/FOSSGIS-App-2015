@@ -969,7 +969,7 @@
 										<div class="row collapse">
 											<div class="large-12 columns">
 												<?php
-													include ('../backend/NoticeBoard/index.php');
+													include ('../backend/NoticeBoard/NoticeBoard.php');
 												?>
 
 											</div>
