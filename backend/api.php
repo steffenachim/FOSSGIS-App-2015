@@ -17,13 +17,17 @@
   
   function getTitles($connection) {
 	$ititles = $_COOKIE['title'];
-    $titles = explode(",", $ititles);
+	$ititles =  utf8_decode($ititles);
+   
+    $titles = explode(",", $ititles);	
     $maxi = count($titles);
-	$help = $maxi;
+	
+	$help = $maxi - 1;
+	
 	$sql = "Select title, date, start, room_id, duration, description
 		From Speech
 		Where title ";
-    for ($i=0; $i <= $maxi; $i++)
+    for ($i=0; $i < $maxi; $i++)
     {
 		if ($i == $help){
 			$sql = $sql."LIKE '%".$titles[$i]."%'";
