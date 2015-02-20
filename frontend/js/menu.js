@@ -23,7 +23,7 @@
   }
 }
 
-  if ($("dd > a").hasClass('content active')) { function (evt) {
+  if ($("dd > a").hasClass('active')) { function (evt) {
     evt.preventDefault();
     room = evt.target.innerHTML;
     target = evt.target.hash;
