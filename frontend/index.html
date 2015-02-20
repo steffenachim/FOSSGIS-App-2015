@@ -235,17 +235,11 @@
 				<script>
 					function tabActive1 () {
 						$("#panel1-1").removeClass("content").addClass("content active");
-						$("#panel1-1tab").addClass("active");
+						$("#panel1-1tab").addClass("active").click();
 						$("#panel2-1").removeClass("content").addClass("content active");
-						$("#panel2-1tab").addClass("active");
+						$("#panel2-1tab").addClass("active").click();
 						$("#panel3-1").removeClass("content").addClass("content active");
-						$("#panel3-1tab").addClass("active");
-						$( "#panel1-1" ).click(function() {$( "#panel2-1" ).click();});
-						$( "#panel1-1" ).click(function() {$( "#panel3-1" ).click();});
-						$( "#panel2-1" ).click(function() {$( "#panel1-1" ).click();});
-						$( "#panel2-1" ).click(function() {$( "#panel3-1" ).click();});
-						$( "#panel3-1" ).click(function() {$( "#panel1-1" ).click();});
-						$( "#panel3-1" ).click(function() {$( "#panel2-1" ).click();});
+						$("#panel3-1tab").addClass("active").click();
 						$("#panel1-2tab").removeClass("active");
 						$("#panel1-3tab").removeClass("active");
 						$("#panel1-4tab").removeClass("active");
@@ -269,17 +263,11 @@
 				<script>
 					function tabActive2 () {
 						$("#panel1-2").removeClass("content").addClass("content active");
-						$("#panel1-2tab").addClass("active");
+						$("#panel1-2tab").addClass("active").click();
 						$("#panel2-2").removeClass("content").addClass("content active");
-						$("#panel2-2tab").addClass("active");
+						$("#panel2-2tab").addClass("active").click();
 						$("#panel3-2").removeClass("content").addClass("content active");
-						$("#panel3-2tab").addClass("active");
-						$( "#panel1-2" ).click(function() {$( "#panel2-2" ).click();});
-						$( "#panel1-2" ).click(function() {$( "#panel3-2" ).click();});
-						$( "#panel2-2" ).click(function() {$( "#panel1-2" ).click();});
-						$( "#panel2-2" ).click(function() {$( "#panel3-2" ).click();});
-						$( "#panel3-2" ).click(function() {$( "#panel1-2" ).click();});
-						$( "#panel3-2" ).click(function() {$( "#panel2-2" ).click();});
+						$("#panel3-2tab").addClass("active").click();
 						$("#panel1-1tab").removeClass("active");
 						$("#panel1-3tab").removeClass("active");
 						$("#panel1-4tab").removeClass("active");
@@ -303,11 +291,11 @@
 				<script>
 					function tabActive3 () {
 						$("#panel1-3").removeClass("content").addClass("content active");
-						$("#panel1-3tab").addClass("active");
+						$("#panel1-3tab").addClass("active").click();
 						$("#panel2-3").removeClass("content").addClass("content active");
-						$("#panel2-3tab").addClass("active");
+						$("#panel2-3tab").addClass("active").click();
 						$("#panel3-3").removeClass("content").addClass("content active");
-						$("#panel3-3tab").addClass("active");
+						$("#panel3-3tab").addClass("active").click();
 						$("#panel1-1tab").removeClass("active");
 						$("#panel1-2tab").removeClass("active");
 						$("#panel1-4tab").removeClass("active");
