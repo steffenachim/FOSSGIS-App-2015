@@ -13,7 +13,7 @@
         function ShowAnswerForm(id) {
 			$('#actionlink').html("");
 			
-            $.post('nb_form_answer.php', "answerid="+id, function(data){
+            $.post('../backend/NoticeBoard/nb_form_answer.php', "answerid="+id, function(data){
 						data=data.replace("!answerid!",id);
                         $('#answerform').html(data);
                         $('#form').html(data);
@@ -29,7 +29,7 @@
         
 		// Display each comment
         function DisplayComments() {
-            $.post('nb_ret_displaycomments.php', "", function(data){
+            $.post('../backend/NoticeBoard/nb_ret_displaycomments.php', "", function(data){
 				$('#comments').html(data);
 				
             });
