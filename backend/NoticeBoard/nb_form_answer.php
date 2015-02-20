@@ -22,7 +22,7 @@
 </script>
 
 <div id="commentInsert">
- <form action="index.php" method="post" id="answerform">
+ <form action="NoticeBoard.php" method="post" id="answerform">
     
 	<input type="hidden" name="answer_to" id="answer_to" value="!answerid!" />
     Name: </br><input type="text" id="author_name" name="author_name" required /></br></br>
