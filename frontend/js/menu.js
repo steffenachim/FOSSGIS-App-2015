@@ -3,7 +3,7 @@
   var date = "2015-03-11";
   var cal = false;
 
-  $("dd[class='accordion-navigation']").hasClass('active', function(evt){
+  if ($("dd[class='accordion-navigation']").hasClass('active')) { function(evt){
     switch(evt.target.innerHTML){
       case "Mittwoch":
         date = "2015-03-11";
@@ -20,9 +20,10 @@
       default:
         break;
     }
-  });
+  }
+}
 
-  $("dd > a").hasClass('content active', function (evt) {
+  if ($("dd > a").hasClass('content active')) { function (evt) {
     evt.preventDefault();
     room = evt.target.innerHTML;
     target = evt.target.hash;
@@ -90,5 +91,6 @@
       });
     }
 	}
-  });
+  }
+}
 }());
