@@ -1,7 +1,7 @@
 <?php
 ini_set('display_errors', '1');
 error_reporting(E_ALL | E_STRICT);
-include("../config.php");
+include("backend/config.php");
 //global $connection;
 
 
