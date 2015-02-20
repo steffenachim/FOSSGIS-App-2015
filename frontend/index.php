@@ -982,14 +982,10 @@
 						</div>
 
 
-<<<<<<< HEAD
+
 		</div>
 	</div>
-=======
 
-
-
->>>>>>> origin/master
 
 	<!-- Footer -->
 
