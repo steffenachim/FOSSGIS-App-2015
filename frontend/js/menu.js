@@ -3,7 +3,7 @@
   var date = "2015-03-11";
   var cal = false;
 
-  $("dd[class='accordion-navigation']").click(function(evt){
+  $("dd[class='accordion-navigation']").hasClass('active', function(evt){
     switch(evt.target.innerHTML){
       case "Mittwoch":
         date = "2015-03-11";
@@ -22,7 +22,7 @@
     }
   });
 
-  $("dd > a").click(function (evt) {
+  $("dd > a").hasClass('content active', function (evt) {
     evt.preventDefault();
     room = evt.target.innerHTML;
     target = evt.target.hash;
