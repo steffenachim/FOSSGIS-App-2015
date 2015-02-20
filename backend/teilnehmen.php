@@ -26,11 +26,12 @@
 	
 	//$result = mysqli_query($connection, $sql);
 	
-	setcookie('title', $title, strtotime("+1 month"));
+	
 	
 	$cookie = (string)$_COOKIE['title'];
 	$list = $cookie.','.$title;
     $_COOKIE['title'] = $list;
+	setcookie('title', $list, strtotime("+1 month"));
 	
 	header("Location: ../frontend/index.html");
 	exit();
