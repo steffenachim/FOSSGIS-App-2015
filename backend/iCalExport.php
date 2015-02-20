@@ -1,17 +1,23 @@
 <?php
-    $Filename = "EventExport.ics";
-    header("Content-Type: text/Calendar");
+
+	ini_set('display_errors', '1');
+	error_reporting(E_ALL | E_STRICT);
+	
+    $Filename = "FossGISKalender.ics";
+    /*header("Content-Type: text/Calendar");
     header("Content-Disposition: inline; filename=$Filename");
 
 
     echo "BEGIN:VCALENDAR\n";
     echo "VERSION:1.0\n";
     echo "PRODID:PHP\n";
-    echo "METHOD:PUBLISH\n";
+    echo "METHOD:PUBLISH\n";*/
 
     require 'config.php';
     
     $ititles = $_COOKIE['title'];
+	$ititles =  utf8_decode($ititles);
+	echo $ititles;
     $titles = explode(",", $ititles);
     $maxi = count($titles);
 	$help = $maxi;
@@ -20,7 +26,7 @@
 		Where title ";
     for ($i=0; $i <= $maxi; $i++)
     {
-		if ($i = $help){
+		if ($i == $help){
 			$sql = $sql."LIKE '%".$titles[$i]."%'";
 			$sqlarray[] = $sql;
 		}else{
@@ -30,7 +36,9 @@
     }
 	$sqlfor = $sqlarray[0];
 	$sqlend = $sqlfor." GROUP BY date
-		Order by start;"
+		Order by start;";
+		
+	echo $sqlend;
 	
 		
 	$result = mysqli_query($connection, $sqlend);
@@ -48,7 +56,7 @@
     DTEND:".$row['End']. "\n
     END:VEVENT\n
     END:VCALENDAR
-    ";
+    "; 
 
     }
 ?>
