@@ -1105,7 +1105,7 @@ button, .button {
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
   font-size: 1rem;
-  background-color: #eb7f00;
+  background-color: #EE7F00;
   border-color: #007095;
   color: white;
   transition: background-color 300ms ease-out; }
@@ -1130,7 +1130,7 @@ button, .button {
     button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
       color: white; }
   button.alert, .button.alert {
-    background-color: ##EE7F00;
+    background-color: #EE7F00;
     border-color: #EE7F00;
     color: white; }
     button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
@@ -3304,7 +3304,7 @@ meta.foundation-mq-topbar {
       border: 1px solid white;
       display: block;
       text-align: center;
-      background-color: #eb7f00;
+      background-color: #EE7F00;
       color: #2d3841;
       padding: 0.001rem 0rem;
       font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -3314,7 +3314,7 @@ meta.foundation-mq-topbar {
         background-color: #2d3841;
 		    color: #FFFFFF;		}
     .tabs dd.active a, .tabs .tab-title.active a {
-      background-color: #eb7f00;
+      background-color: #EE7F00;
       color: #FFFFFF; }
   .tabs.radius dd:first-child a, .tabs.radius .tab:first-child a {
     -webkit-border-bottom-left-radius: 1px;
@@ -3377,7 +3377,7 @@ meta.foundation-mq-topbar {
       border: 1px solid white;
       display: block;
       text-align: center;
-      background-color: #eb7f00;
+      background-color: #EE7F00;
       color: #2d3841;
       padding: 0.001rem 0rem;
       font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -3387,7 +3387,7 @@ meta.foundation-mq-topbar {
         background-color: #2d3841;
         color: #FFFFFF;   }
     .tabs dd.active a, .tabs .tab-title.active a {
-      background-color: #eb7f00;
+      background-color: #EE7F00;
       color: #FFFFFF; }
   .tabs.radius dd:first-child a, .tabs.radius .tab:first-child a {
     -webkit-border-bottom-left-radius: 1px;
@@ -3519,7 +3519,7 @@ ul.pagination {
     margin-bottom: 0 !important; }
     .accordion .accordion-navigation.active > a, .accordion dd.active > a {
       background: #e8e8e8;
-      color: #eb7f00; }
+      color: #EE7F00; }
     .accordion .accordion-navigation > a, .accordion dd > a {
       background: #efefef;
       color: #222222;
@@ -3551,10 +3551,10 @@ ul.pagination {
     border-color: #FFFFFF;
     margin-bottom: 0 !important; }
     .accordion1 .accordion-navigation.active > a, .accordion1 dd.active > a {
-      background: #eb7f00;
+      background: #EE7F00;
       color: #FFFFFF; }
     .accordion1 .accordion-navigation > a, .accordion1 dd > a {
-      background: #eb7f00;
+      background: #EE7F00;
       color: #2d3841;
       padding: 1rem;
       display: block;
