@@ -4136,7 +4136,8 @@ blockquote p {
   padding: 1.875rem; }
   @media only screen and (max-width: 40em) {
     .reveal-modal, dialog {
-      min-height: 100vh; } }
+      width: 80%;
+      min-height: 90vh; } }
   .reveal-modal .column, dialog .column, .reveal-modal .columns, dialog .columns {
     min-width: 0; }
   .reveal-modal > :first-child, dialog > :first-child {
