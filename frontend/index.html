@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png" />
 	<link rel="icon" href="img/favicon.png" type="image/png" />
@@ -57,18 +57,23 @@
 	</div>
 
 	<script>
-		var iOS = false,
+		var iOS = false;
+		var iOSModal = $( "#iOSModal" );
     p = navigator.platform;
 
 		if( p === 'iPad' || p === 'iPhone' || p === 'iPod' ){
     	iOS = true;
 		}
 
-		if (iOS == false) {
+		if (iOS == true) {
 			document.getElementById("iOSPanel").style.display = "block";
-			$(window).load(function(){
-       $('#iOSModal').foundation('reveal', 'open');
-     	});
+			if (window.navigator.standalone === false) {
+				$(window).load(function(){
+       		$('#iOSModal').foundation('reveal', 'open');
+     		});
+			} else {
+
+			}
 		}
 
 		function readDeviceOrientation() {
