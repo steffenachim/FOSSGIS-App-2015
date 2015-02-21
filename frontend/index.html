@@ -7,8 +7,8 @@
   <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png" />
 	<link rel="icon" href="img/favicon.png" type="image/png" />
@@ -40,6 +40,24 @@
 <body onLoad="checkDate()">
 
 	<!-- header -->
+
+	<div class="row" id="iOSPanel" style="display: none">
+		<div class="panel" style="height: 20px; border-width: 0px; background: #000000; margin-bottom: 0px">
+		</div>
+	</div>
+
+	<script>
+		var iOS = false,
+    p = navigator.platform;
+
+		if( p === 'iPad' || p === 'iPhone' || p === 'iPod' ){
+    	iOS = true;
+		}
+
+		if (iOS == false) {
+			document.getElementById("iOSPanel").style.display = "block";
+		}
+	</script>
 
   <div class="row">
 		<img src="img/header.png" height="100%" alt="SchlossMuenster">
