@@ -4137,7 +4137,10 @@ blockquote p {
   @media only screen and (max-width: 40em) {
     .reveal-modal, dialog {
       width: 80%;
-      min-height: 90vh; } }
+      min-height: 50%;
+      margin-top: 10%;
+      margin-left: 10%;
+      margin-right: 10%; } }
   .reveal-modal .column, dialog .column, .reveal-modal .columns, dialog .columns {
     min-width: 0; }
   .reveal-modal > :first-child, dialog > :first-child {
