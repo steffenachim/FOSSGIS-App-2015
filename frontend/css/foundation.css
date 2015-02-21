@@ -1754,7 +1754,7 @@ meta.foundation-mq-topbar {
   left: 0;
   position: fixed;
   top: 0;
-  z-index: 99; }
+  z-index: 1002; }
   .fixed.expanded:not(.top-bar) {
     overflow-y: auto;
     height: auto;
@@ -1763,9 +1763,9 @@ meta.foundation-mq-topbar {
     .fixed.expanded:not(.top-bar) .title-area {
       position: fixed;
       width: 100%;
-      z-index: 99; }
+      z-index: 1002; }
     .fixed.expanded:not(.top-bar) .top-bar-section {
-      z-index: 98;
+      z-index: 1001;
       margin-top: 45px; }
 
 .top-bar {
