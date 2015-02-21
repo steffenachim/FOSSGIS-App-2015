@@ -43,17 +43,8 @@
 
 	<div id="iOSModal" class="reveal-modal" data-reveal>
   	<p><strong>Hallo und Wilkommen zur Web-App der FOSSGIS 2015</strong></p>
-  	<p>F&uuml;r ein optmiles Nutzererlebnis auf iOS-Geräten empfehlen wir die Web-Application zu Ihrem Homescreen hinzuzufügen.<br/>Klicken sie dafür einfach auf "<img src="img/iOS-ActionButton.svg"  width="17" height="18">", anschließen auf "<img src="img/iOS-AddToHomescreen.svg"  width="20" height="20">" und bestätigen Sie dann, indem sie auf "Hinzufügen" klicken.<br/>Anschließen starten sie die App einfach über das FOSSGIS Icon.</p>
+  	<p>F&uuml;r ein optmiles Nutzererlebnis auf iOS-Geräten empfehlen wir die Web-Application zu Ihrem Homescreen hinzuzufügen.<br/>Klicken sie dafür einfach auf "<img src="img/iOS-ActionButton.png"  width="17" height="18">", anschließen auf "<img src="img/iOS-AddToHomescreen.png"  width="20" height="20">" und bestätigen Sie dann, indem sie auf "Hinzufügen" klicken.<br/>Anschließen starten sie die App einfach über das FOSSGIS Icon.</p>
   	<a class="close-reveal-modal">&#215;</a>
-	</div>
-
-	<div class="row" id="iOSPanel" style="margin-bottom: 20px; display: none">
-		<div class="contain-to-grid">
-			<div class="fixed">
-				<nav class="top-bar" role="navigation" style="height: 20px; background: #000000">
-				</nav>
-			</div>
-		</div>
 	</div>
 
 	<script>
@@ -66,7 +57,6 @@
 		}
 
 		if (iOS == true) {
-			document.getElementById("iOSPanel").style.display = "block";
 			if (window.navigator.standalone === false) {
 				$(window).load(function(){
        		$('#iOSModal').foundation('reveal', 'open');
