@@ -10,6 +10,32 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+  <script type="text/javascript">
+		(function(document,navigator,standalone) {
+			// prevents links from apps from oppening in mobile safari
+			// this javascript must be the first script in your <head>
+			if ((standalone in navigator) && navigator[standalone]) {
+				var curnode, location=document.location, stop=/^(a|html)$/i;
+				document.addEventListener('click', function(e) {
+					curnode=e.target;
+					while (!(stop).test(curnode.nodeName)) {
+						curnode=curnode.parentNode;
+					}
+					// Condidions to do this only on links to your own app
+					// if you want all links, use if('href' in curnode) instead.
+					if('href' in curnode && // is a link
+						(chref=curnode.href).replace(location.href,'').indexOf('#') && // is not an anchor
+						( !(/^[a-z\+\.\-]+:/i).test(chref) || // either does not have a proper scheme (relative links)
+						chref.indexOf(location.protocol+'//'+location.host)===0 ) // or is in the same protocol and domain
+					) {
+						e.preventDefault();
+						location.href = curnode.href;
+					}
+				},false);
+			}
+		})(document,window.navigator,'standalone');
+	</script>
+
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png" />
 	<link rel="icon" href="img/favicon.png" type="image/png" />
 
@@ -34,34 +60,6 @@
 	<style type="text/css">
 		iframe[id^='twitter-widget-0']{ width:100% !important;}
 	</style>
-
-	<script>
-			<script type="text/javascript">
-(function(document,navigator,standalone) {
-// prevents links from apps from oppening in mobile safari
-// this javascript must be the first script in your <head>
-if ((standalone in navigator) && navigator[standalone]) {
-var curnode, location=document.location, stop=/^(a|html)$/i;
-document.addEventListener('click', function(e) {
-curnode=e.target;
-while (!(stop).test(curnode.nodeName)) {
-curnode=curnode.parentNode;
-}
-// Condidions to do this only on links to your own app
-// if you want all links, use if('href' in curnode) instead.
-if(
-'href' in curnode && // is a link
-(chref=curnode.href).replace(location.href,'').indexOf('#') && // is not an anchor
-( !(/^[a-z\+\.\-]+:/i).test(chref) || // either does not have a proper scheme (relative links)
-chref.indexOf(location.protocol+'//'+location.host)===0 ) // or is in the same protocol and domain
-) {
-e.preventDefault();
-location.href = curnode.href;
-}
-},false);
-}
-})(document,window.navigator,'standalone');
-</script>
 
 </head>
 
@@ -138,7 +136,7 @@ location.href = curnode.href;
         <div class="content active" id="news">
         	<div style="margin-top:10px">
         		<p class="text-justify">
-        			<a href="" data-reveal-id="iOSModal">Achtung!</a> Das FOSSGIS-Team sucht noch viele freiwillige Helfer. Nähere Informationen gibt es <a href="http://www.fossgis.de/konferenz/2015/anmeldung/" target="_blank">hier</a> oder direkt in unserem <a href="http://helfer.fossgis.de/" target="_blank">Engelsystem</a>.
+        			Achtung! Das FOSSGIS-Team sucht noch viele freiwillige Helfer. Nähere Informationen gibt es <a href="http://www.fossgis.de/konferenz/2015/anmeldung/" target="_blank">hier</a> oder direkt in unserem <a href="http://helfer.fossgis.de/" target="_blank">Engelsystem</a>.
         		</p>
 						<a class="twitter-timeline" align="center" id="twitter-widget-0" href="https://twitter.com/FOSSGIS2015" data-widget-id="542438223738187776">Tweets von @FOSSGIS2015</a>
       			<script>
@@ -1028,8 +1026,8 @@ location.href = curnode.href;
 	<div class="row">
 		<ul class="breadcrumbs">
 			<li class="current"><a href="">Home</a></li>
-			<li><a href="Impressum.html">Impressum</a></li>
-			<li><a href="FAQ.html">FAQ</a></li>
+			<li><a href="giv-fossgis-app.uni-muenster.de/fossgis/frontend/Impressum.html">Impressum</a></li>
+			<li><a href="giv-fossgis-app.uni-muenster.de/fossgis/frontend/FAQ.html">FAQ</a></li>
 		</ul>
 	</div>
 
