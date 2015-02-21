@@ -69,7 +69,8 @@
 
 	<div id="iOSModal" class="reveal-modal" data-reveal>
   	<p><strong>Willkommen zur Web-App der FOSSGIS 2015</strong></p>
-  	<p class="text-justify">F&uuml;r ein optimales Nutzererlebnis auf iOS-Geräten empfehlen wir, die Web-Application zu Ihrem Homescreen hinzuzufügen.<br/>Klicken sie dafür einfach auf <nobr>"<img src="img/iOS-ActionButton.png"  width="17" height="18">"</nobr>, anschließen auf <nobr>"<img src="img/iOS-AddToHomescreen.png"  width="20" height="20">"</nobr> und bestätigen Sie dann, indem sie auf "Hinzufügen" klicken.<br/>Anschließen starten sie die App einfach über das FOSSGIS Icon.</p>
+  	<p class="text-justify">F&uuml;r ein optimales Nutzererlebnis auf iOS-Geräten empfehlen wir, die Web-Application zu Ihrem Homescreen hinzuzufügen.<br/>Klicken sie dafür einfach auf <nobr>"<img src="img/iOS-ActionButton.png"  width="17" height="18">"</nobr>, anschließend auf <nobr>"<img src="img/iOS-AddToHomescreen.png"  width="20" height="20">"</nobr> und bestätigen Sie dann, indem Sie auf "Hinzufügen" klicken.<br/>Anschließen starten Sie die App einfach über das FOSSGIS Icon.</p>
+  	<input id="hideModal" type="checkbox"><label for="checkbox1">Zeige mir diesen Hinweis nicht mehr an!</label>
   	<a class="close-reveal-modal">&#215;</a>
 	</div>
 
@@ -78,6 +79,42 @@
 		var iOSModal = $( "#iOSModal" );
     p = navigator.platform;
 
+    // functions for cookies
+    function setCookie() {
+      if(document.getElementById("hideModal").checked == true){
+        document.cookie = "help=off";
+      } else {
+        document.cookie = "help=on";
+      }
+    }
+
+    function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+      }
+      return "";
+    }
+
+    function showiOSModal() {
+      var c = getCookie("help");
+      if(c=="" || c=="on"){
+        $(window).load(function(){
+        	$('#hideModal').removeAttr('checked');
+       		$('#iOSModal').foundation('reveal', 'open');
+     		});
+    	} else {
+    	}
+    }
+
+    $('#iOSModal').bind('closed', function() {
+    	setCookie();
+    });
+
+		// conditions for loading the modal
 		if( p === 'iPad' || p === 'iPhone' || p === 'iPod' ){
     	iOS = true;
 		}
@@ -85,11 +122,8 @@
 		if (iOS == true) {
 			//document.getElementById("iOSPanel").style.display = "block";
 			if (window.navigator.standalone === false) {
-				$(window).load(function(){
-       		$('#iOSModal').foundation('reveal', 'open');
-     		});
+				showiOSModal();
 			} else {
-
 			}
 		}
 
@@ -109,7 +143,7 @@
 	</script>
 
   <div class="row">
-		<img src="img/header.png" height="100%" alt="SchlossMuenster">
+		<a href=""><img src="img/header.png" height="100%" alt="SchlossMuenster"></a>
 	</div>
 
 	<!-- page body -->

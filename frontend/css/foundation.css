@@ -4136,11 +4136,11 @@ blockquote p {
   padding: 1.875rem; }
   @media only screen and (max-width: 40em) {
     .reveal-modal, dialog {
-      width: 80%;
+      width: 90%;
       min-height: 50%;
       margin-top: 10%;
-      margin-left: 10%;
-      margin-right: 10%; } }
+      margin-left: 5%;
+      margin-right: 5%; } }
   .reveal-modal .column, dialog .column, .reveal-modal .columns, dialog .columns {
     min-width: 0; }
   .reveal-modal > :first-child, dialog > :first-child {
