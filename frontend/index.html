@@ -61,6 +61,19 @@
 		if (iOS == true) {
 			document.getElementById("iOSPanel").style.display = "block";
 		}
+
+		function readDeviceOrientation() {
+			if (Math.abs(window.orientation) === 90) {
+        // Landscape
+        document.getElementById("iOSPanel").style.display = "none";
+      } else {
+      	// Portrait
+      	document.getElementById("iOSPanel").style.display = "block";
+    	}
+		}
+
+		window.onorientationchange = readDeviceOrientation;
+
 	</script>
 
   <div class="row">
