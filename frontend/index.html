@@ -67,7 +67,7 @@
 
 		if (iOS == true) {
 			document.getElementById("iOSPanel").style.display = "block";
-			$('#iOSModal').foundation('reveal', 'open');
+			//$('#iOSModal').foundation('reveal', 'open');
 		}
 
 		function readDeviceOrientation() {
@@ -1040,6 +1040,7 @@
 	</script>
 
   <script>
+  	$(document).foundation();
   	$(document).foundation('reveal', 'reflow');
   	//Erlaubt mehrere Accordions aufzuhaben. Interferiert momentan mit dem Einladen der Veranstaltungen
     /*
