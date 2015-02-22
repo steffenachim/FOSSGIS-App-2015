@@ -75,7 +75,7 @@
         obj = JSON.parse(data);
         console.log(obj);
         obj.forEach( function(speech) {
-          $(target).append("<div class='row'><div class='small-12 medium-8 columns'><p>"+speech.start+" : "+speech.title+"</div><div class='small-12 medium-4 columns'><div class='row'><form action='../backend/teilnehmen.php' method='get'><input type=hidden id=title name=title value="+speech.title+"><a href='#' class='button openmodal' data-reveal-id='infos"+speech.number+"-"+target.slice(1,target.length)+"'> weitere Informationen</a> <input type='submit' id='filter' class='button' value='Vormerken'></form></div></div></p></div>");
+          $(target).append("<div class='row'><div class='small-12 medium-8 columns'><p>"+speech.start+" : "+speech.title+"</div><div class='small-12 medium-4 columns'><form action='../backend/teilnehmen.php' method='get'><input type=hidden id=title name=title value="+speech.title+"><a href='#' class='button openmodal' data-reveal-id='infos"+speech.number+"-"+target.slice(1,target.length)+"'> weitere Informationen</a> <input type='submit' id='filter' class='button' value='Vormerken'></form></div></p></div>");
           $(target).append("<div id='infos"+speech.number+"-"+target.slice(1,target.length)+"' class='reveal-modal' data-reveal><h2>"+speech.title+"</h2><p class='lead'>"+speech.subtitle+"</p><p>Dauer: "+speech.duration+"</p><p>Referent: "+speech.name+"</p><p>"+speech.description+"</p><a class='close-reveal-modal'>&#215;</a></div>");
 		  $('a.openmodal').on("click", function (evt) {
             evt.preventDefault();
