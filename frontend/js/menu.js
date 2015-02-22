@@ -42,7 +42,7 @@
         obj = JSON.parse(data);
         console.log(obj);
         obj.forEach( function(speech) {
-          $(target).append("<div class='row small-collapse large-uncollapse'><div class='small-12 large-6 columns'><p>" +speech.datum+" "+speech.start+" : "+speech.title+"</div><div class='small-12 large-6 columns'><a href='#' class='button openmodal' style='width: 69%' data-reveal-id='infos"+speech.number+"-"+target.slice(1,target.length)+"'> weitere Informationen</a></p></div></div>");
+          $(target).append("<div class='row small-collapse large-uncollapse'><div class='small-12 large-6 columns'><p>" +speech.datum+" "+speech.start+" : "+speech.title+"</div><div class='small-12 large-6 columns'><a href='#' class='button openmodal' style='width: 64%; padding: 0.001rem 0rem' data-reveal-id='infos"+speech.number+"-"+target.slice(1,target.length)+"'> weitere Informationen</a></p></div></div>");
           $(target).append("<div id='infos"+speech.number+"-"+target.slice(1,target.length)+"' class='reveal-modal' data-reveal><h2>"+speech.title+"</h2><p class='lead'>"+speech.room+"</p><p>Dauer: "+speech.duration+"</p><p>"+speech.description+"</p><a class='close-reveal-modal'>&#215;</a></div>");
 		  $('a.openmodal').on("click", function (evt) {
             evt.preventDefault();
@@ -75,7 +75,7 @@
         obj = JSON.parse(data);
         console.log(obj);
         obj.forEach( function(speech) {
-          $(target).append("<div class='row small-collapse large-uncollapse'><div class='small-12 large-6 columns'><p>"+speech.start+" : "+speech.title+"</div><div class='small-12 large-6 columns'><form action='../backend/teilnehmen.php' method='get'><input type=hidden id=title name=title value="+speech.title+"><a href='#' class='button openmodal' style='width: 69%' data-reveal-id='infos"+speech.number+"-"+target.slice(1,target.length)+"'> weitere Informationen</a> <input type='submit' id='filter' class='button' style='width: 30%' value='Vormerken'></form></div></p></div>");
+          $(target).append("<div class='row small-collapse large-uncollapse'><div class='small-12 large-6 columns'><p>"+speech.start+" : "+speech.title+"</div><div class='small-12 large-6 columns'><form action='../backend/teilnehmen.php' method='get'><input type=hidden id=title name=title value="+speech.title+"><a href='#' class='button openmodal' style='width: 64%; padding: 0.001rem 0rem' data-reveal-id='infos"+speech.number+"-"+target.slice(1,target.length)+"'> weitere Informationen</a> <input type='submit' id='filter' class='button' style='width: 35%; padding: 0.001rem 0rem' value='Vormerken'></form></div></p></div>");
           $(target).append("<div id='infos"+speech.number+"-"+target.slice(1,target.length)+"' class='reveal-modal' data-reveal><h2>"+speech.title+"</h2><p class='lead'>"+speech.subtitle+"</p><p>Dauer: "+speech.duration+"</p><p>Referent: "+speech.name+"</p><p>"+speech.description+"</p><a class='close-reveal-modal'>&#215;</a></div>");
 		  $('a.openmodal').on("click", function (evt) {
             evt.preventDefault();
