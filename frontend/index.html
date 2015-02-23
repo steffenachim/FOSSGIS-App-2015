@@ -10,7 +10,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <!--<script type="text/javascript">
+  <script type="text/javascript">
 		(function(document,navigator,standalone) {
 			// prevents links from apps from oppening in mobile safari
 			// this javascript must be the first script in your <head>
@@ -24,7 +24,7 @@
 					// Condidions to do this only on links to your own app
 					// if you want all links, use if('href' in curnode) instead.
 					if('href' in curnode && // is a link
-						(chref=curnode.href).replace(location.href,'').indexOf('#') && // is not an anchor
+						//(chref=curnode.href).replace(location.href,'').indexOf('#') && // is not an anchor
 						( !(/^[a-z\+\.\-]+:/i).test(chref) || // either does not have a proper scheme (relative links)
 						chref.indexOf(location.protocol+'//'+location.host)===0 ) // or is in the same protocol and domain
 					) {
@@ -34,7 +34,7 @@
 				},false);
 			}
 		})(document,window.navigator,'standalone');
-	</script>-->
+	</script>
 
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png" />
 	<link rel="icon" href="img/favicon.png" type="image/png" />
