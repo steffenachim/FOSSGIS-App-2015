@@ -226,7 +226,7 @@
 						<dd class="accordion-navigation" id="eventsWednesday" style="margin-top:5px">
 							<a href="#panel1">Mittwoch</a>
 							<div id="panel1" class="content">
-							 	<dl class="tabs" data-tab>
+							 	<dl class="tabs" data-tab id="tabsWednesday">
 									<dd id="panel1-1tab" onClick="tabActive1()"><a href="#panel1-1" style="padding-bottom: 0.52rem; padding-top: 0.52rem">Aula</a></dd>
 									<dd id="panel1-2tab" onClick="tabActive2()"><a href="#panel1-2" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S10</a></dd>
 									<dd id="panel1-3tab" onClick="tabActive3()"><a href="#panel1-3" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S1</a></dd>
@@ -238,7 +238,7 @@
 							  <div class="tabs-content">
 									<div class="content" id="panel1-1">
 										<!-- for design testing -->
-									 	<!--<div class='row'>
+									 	<!--<div class='row'>									 		
 									 		<div class='small-12 medium-6 large-8 columns'>
 									 			<p>14:00:00 : Softwarewartung für OpenSource. Ein Widerspruch?</p>
 									 		</div>
@@ -277,7 +277,7 @@
 		   			<dd class="accordion-navigation" id="eventsThursday">
 							<a href="#panel2">Donnerstag</a>
 							<div id="panel2" class="content">
-								<dl class="tabs" data-tab>
+								<dl class="tabs" data-tab id="tabsThursday">
 									<dd id="panel2-1tab" onClick="tabActive1()"><a href="#panel2-1" style="padding-bottom: 0.52rem; padding-top: 0.52rem">Aula</a></dd>
 									<dd id="panel2-2tab" onClick="tabActive2()"><a href="#panel2-2" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S10</a></dd>
 									<dd id="panel2-3tab" onClick="tabActive3()"><a href="#panel2-3" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S1</a></dd>
@@ -314,7 +314,7 @@
 						<dd class="accordion-navigation" id="eventsFriday">
 							<a href="#panel3">Freitag</a>
 							<div id="panel3" class="content">
-								<dl class="tabs" data-tab>
+								<dl class="tabs" data-tab id="tabsFriday">
 									<dd id="panel3-1tab" onClick="tabActive1()"><a href="#panel3-1" style="padding-bottom: 0.52rem; padding-top: 0.52rem">Aula</a></dd>
 									<dd id="panel3-2tab" onClick="tabActive2()"><a href="#panel3-2" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S10</a></dd>
 									<dd id="panel3-3tab" onClick="tabActive3()"><a href="#panel3-3" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S1</a></dd>
@@ -359,6 +359,8 @@
 							</div>	
 						</dd>
 					</dl>
+					<br/>
+					<p>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.</p>
  				</div>
  				<!--Auskommentiert bis auch eine Lösung für synchronisiertes Einladen gefunden ist-->
 				<!--<script>
@@ -1108,6 +1110,21 @@
 				$('#panel3').removeClass('content').addClass('content active');
 			}
 		}
+	</script>
+
+	<script>
+		$('#tabsWednesday').on('toggled', function (event, tab) {
+    	var containerPos = $('#tabsWednesday').parent().offset().top;
+    	$('html, body').animate({ scrollTop: containerPos }, 600);
+  	});
+  	$('#tabsThursday').on('toggled', function (event, tab) {
+    	var containerPos = $('#tabsThursday').parent().offset().top;
+    	$('html, body').animate({ scrollTop: containerPos }, 600);
+  	});
+  	$('#tabsFriday').on('toggled', function (event, tab) {
+    	var containerPos = $('#tabsFriday').parent().offset().top;
+    	$('html, body').animate({ scrollTop: containerPos }, 600);
+  	});
 	</script>
 
   <script>
