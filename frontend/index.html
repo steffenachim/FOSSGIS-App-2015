@@ -13,7 +13,7 @@
   <script type="text/javascript">
 		(function(document,navigator,standalone) {
 			// prevents links from apps from oppening in mobile safari
-			// this javascript must be the first script in your <head>
+			// this javascript must be the first script in the <head>
 			if ((standalone in navigator) && navigator[standalone]) {
 				var curnode, location=document.location, stop=/^(a|html)$/i;
 				document.addEventListener('click', function(e) {
@@ -21,8 +21,8 @@
 					while (!(stop).test(curnode.nodeName)) {
 						curnode=curnode.parentNode;
 					}
-					// Condidions to do this only on links to your own app
-					// if you want all links, use if('href' in curnode) instead.
+					// Condidions to open only links directly referred to the project inside the web app
+					// for opening all links inside the web app, use if(curnode.href) instead.
 					if( curnode.href && // is a link
 						(chref=curnode.href).replace(location.href,'').indexOf('#') && // is not an anchor
 						( !(/^[a-z\+\.\-]+:/i).test(chref) || // either does not have a proper scheme (relative links)
@@ -159,7 +159,7 @@
         	<a href="#veranstaltungen">Veranstaltungen</a>
         </dd>
         <dd id="navigationTab" onclick="navigation()">
-        	<a href="#navigation" id="navigationTab1">Navigation</a>
+        	<a href="#navigation">Navigation</a>
        	</dd>
 				<dd id="boardTab">
 					<a href="#schwarzesBrett">Schwarzes Brett</a>
@@ -226,7 +226,7 @@
 						<dd class="accordion-navigation" id="eventsWednesday" style="margin-top:5px">
 							<a href="#panel1">Mittwoch</a>
 							<div id="panel1" class="content">
-							 	<dl class="tabs" data-tab>
+							 	<dl class="tabs" data-tab id="tabsWednesday">
 									<dd id="panel1-1tab" onClick="tabActive1()"><a href="#panel1-1" style="padding-bottom: 0.52rem; padding-top: 0.52rem">Aula</a></dd>
 									<dd id="panel1-2tab" onClick="tabActive2()"><a href="#panel1-2" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S10</a></dd>
 									<dd id="panel1-3tab" onClick="tabActive3()"><a href="#panel1-3" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S1</a></dd>
@@ -277,7 +277,7 @@
 		   			<dd class="accordion-navigation" id="eventsThursday">
 							<a href="#panel2">Donnerstag</a>
 							<div id="panel2" class="content">
-								<dl class="tabs" data-tab>
+								<dl class="tabs" data-tab id="tabsThursday">
 									<dd id="panel2-1tab" onClick="tabActive1()"><a href="#panel2-1" style="padding-bottom: 0.52rem; padding-top: 0.52rem">Aula</a></dd>
 									<dd id="panel2-2tab" onClick="tabActive2()"><a href="#panel2-2" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S10</a></dd>
 									<dd id="panel2-3tab" onClick="tabActive3()"><a href="#panel2-3" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S1</a></dd>
@@ -314,7 +314,7 @@
 						<dd class="accordion-navigation" id="eventsFriday">
 							<a href="#panel3">Freitag</a>
 							<div id="panel3" class="content">
-								<dl class="tabs" data-tab>
+								<dl class="tabs" data-tab id="tabsFriday">
 									<dd id="panel3-1tab" onClick="tabActive1()"><a href="#panel3-1" style="padding-bottom: 0.52rem; padding-top: 0.52rem">Aula</a></dd>
 									<dd id="panel3-2tab" onClick="tabActive2()"><a href="#panel3-2" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S10</a></dd>
 									<dd id="panel3-3tab" onClick="tabActive3()"><a href="#panel3-3" style="padding-bottom: 0.52rem; padding-top: 0.52rem">S1</a></dd>
@@ -358,7 +358,9 @@
 								</div>	
 							</div>	
 						</dd>
-					</dl> 
+					</dl>
+					<br/>
+					<p>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.<br/>.</p>
  				</div>
  				<!--Auskommentiert bis auch eine Lösung für synchronisiertes Einladen gefunden ist-->
 				<!--<script>
@@ -665,7 +667,7 @@
 				<script>
           //initialize map
           var map = L.map('map').setView([51.9635, 7.60973],15);
-          map.options.minZoom = 6;
+          map.options.minZoom = 13;
           
           // create and load tile layers
           var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v4/janu5.8327d153/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFudTUiLCJhIjoiR240TW5pTSJ9.XKYs-6ZWuWc-Yj8Wk1J2Rg', {
@@ -1109,6 +1111,21 @@
 			}
 		}
 	</script>
+	
+	<script>
+		$('#tabsWednesday').on('toggled', function (event, tab) {
+    	var containerPos = $('#tabsWednesday').parent().offset().top;
+    	$('html, body').animate({ scrollTop: containerPos }, 600);
+  	});
+  	$('#tabsThursday').on('toggled', function (event, tab) {
+    	var containerPos = $('#tabsThursday').parent().offset().top;
+    	$('html, body').animate({ scrollTop: containerPos }, 600);
+  	});
+  	$('#tabsFriday').on('toggled', function (event, tab) {
+    	var containerPos = $('#tabsFriday').parent().offset().top;
+    	$('html, body').animate({ scrollTop: containerPos }, 600);
+  	});
+	</script>
 
   <script>
   	$(document).foundation();
@@ -1120,7 +1137,13 @@
     		multi_expand: true
   		}
   	});
-		*/
+  	*/
+		$(document).foundation('accordion', {
+  		callback: function (el){
+    		var containerPos = $(el).parent().offset().top;
+    		$('html, body').animate({ scrollTop: containerPos }, 600);
+  		}
+		});
   </script>
 
   <script type="text/javascript" src="js/menu.js"></script>
